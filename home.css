@@ -1,0 +1,11 @@
+@font-face {
+    font-family: arialn;
+    src: url(/fonts/ARIALN.TTF);
+
+}
+body {background-color: black;}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
