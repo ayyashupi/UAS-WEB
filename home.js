@@ -7,6 +7,8 @@ function Test() {
 function AnimasiWelcome() {
 	var pos = 1;
 	var div = document.getElementById("welcome");
+	var baki = document.getElementById("baki");
+	baki.style.opacity = 0;
 	clearInterval(id);
 	id = setInterval(fadein, 10);
 	var i = 0;
@@ -15,6 +17,7 @@ function AnimasiWelcome() {
     		clearInterval(id);
 			
     		div.style.opacity = 1;
+    		baki.style.opacity = 1;
     		pos = 0;
     		id = setInterval(hover,4);
     		
@@ -22,6 +25,7 @@ function AnimasiWelcome() {
   			pos++;
     		div.style.marginTop = (pos/10) - 50 +'%';
   	  		div.style.opacity = (pos * (1/500));
+  	  		baki.style.opacity = (pos * (1/500))-0.6;
  	   	}
 	}
     var increase = true;
