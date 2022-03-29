@@ -1,8 +1,14 @@
 @font-face {
     font-family: arialn;
-    src: url(/fonts/ARIALN.TTF);
+    src: url(fonts/ARIALN.TTF);
 
 }
+
+@font-face {
+    font-family: Freehand;
+    src: url(fonts/freehand.TTF);
+}
+
 body {
 	background-image: url("images/background.png");
 	background-size: cover;
@@ -15,4 +21,34 @@ body {
     top: 2%;
     left: 1%;
 
+}
+
+.about{
+	display: block;
+	position: absolute;
+    bottom: 2%;
+    left: 1%;
+    font-family: "Freehand";
+    color: white;
+    font-size: 40px;
+}
+
+.baki{
+	display: block;
+	margin: auto;
+	margin-top: 1%;
+	text-align: center;
+    font-family: "Freehand";
+    color: white;
+    font-size: 40px;
+}
+
+.soerat{
+	display: block;
+	position: absolute;
+    top: 2%;
+    right: 2%;
+    font-family: "Freehand";
+    color: white;
+    font-size: 40px;
 }
