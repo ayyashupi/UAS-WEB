@@ -15,7 +15,7 @@ body {
 }
 
 .logo {
-    width: 12%;
+    width: 10%;
     display: block;
     position: absolute;
     top: 2%;
@@ -51,4 +51,17 @@ body {
     font-family: "Freehand";
     color: white;
     font-size: 40px;
+}
+
+.homeimg{
+	width: 40%;
+    display: block;
+    margin: auto;
+}
+
+p{
+	font-family: "Freehand";
+    color: white;
+    font-size: 40px;
+    text-align: center;
 }
