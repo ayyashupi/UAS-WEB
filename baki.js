@@ -18,6 +18,7 @@ img5.alt = "SYAHRUDDIN HARAHAP. Lahir di Kabanjahe, Sumatera Utara, 3 Desember 1
 var img6 = document.getElementById("image6");
 img6.alt = "SYAHRIZAL PAHLEVI. Lahir: Palembang,14 Oktober 1965. Pendidikan: Tamat dari jurusan Seni Lukis ISI Yogyakarta (1994). Pameran tunggal: 1998 – Lukisan dan Instalasi,Bentara Budaya Yogyakarta / 1999 – “Juice Merah Hangat dan Segar”, Instalasi, Lembaga Indonesia-Prancis Yogyakarta / 2000 – Lukisan dan Seni Grafis Indosteak Restaurant, Jakarta / 2004 – “Seri Penulis dll” Seni Grafis, Kedai Kebun Forum Yogyakarta / 2005 – “Harmanto” Grafis dan media campuran, Bentara Budaya Yogyakarta / 2008 – “Maps in Mind/Pahlevi”, Galeri Langgeng, Magelang. Pameran bersama: 2004 – “Treshold”, Museum Affandi, Yogyakarta / 2005 – “Mari Gembira”, Kedai Kebun Forum, Yogyakarta / 2006 – 7th Triennale Mondiale D’estampes, Galerie d’art Contemporain de Chamalianes, France. Penghargaan: 1991 – Terbaik II Karikatur Pariwisata ‘KEKAR 91’, Jakarta / 1995, 1996, 1997 – Finalis Philip Morris IAA /2003, 2006 – Finalis Trienal Seni Grafis Indonesia. Somodaran GP III No. 51, Banyuraden, Yogyakarta";
 
+var modalImg = document.getElementById("modalimg");
 img1.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
