@@ -3,9 +3,16 @@
     src: url(/fonts/ARIALN.TTF);
 
 }
-body {background-color: black;}
+body {
+	background-image: url("images/background.png");
+	background-size: cover;
+}
 
 .logo {
-    max-width: 100%;
-    height: auto;
+    width: 12%;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+
 }
