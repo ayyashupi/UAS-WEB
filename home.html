@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="home.css">
-<script type="text/javascript" src="home.js"></script>
 <head>
-	<title>Teras</title>
+    <script type="text/javascript" src="home.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <style type="text/css">@import url("menubar.css");</style>
+    <link rel="icon" href="images/icon.png" type="image/png">
+	<title>Loekis (Galeri Lukisan Lawas Nusantara).</title>
 </head>
-<body onload="AnimasiWelcome()">
-    <a href="home.html"><img class="logo" src="images/logo.png"></a>
+<body onload="rendertime();"> //Untuk menginisiasi fitur live clock
 
+    //Start nampilin menu title
+    <a class="home" href="home.html">Teras</a>
 
-    <a class="about" href="KirimPesan.html">About Us</a>
+    <a class="galeri" href="galeri.html">Baki Tjitra</a>
 
-    <a id="baki" class="baki" href="BakiTjitra.html">Baki Tjitra</a>
+    <a class="about2" href="about.html">Tentang Kami</a>    //pindahin ini ke sebelah kanan "Baki Tjitra"
 
-    <a class="soerat" href="KirimPesan.html">Kotak Soerat</a>
-    <br><br>
-    <div class="welcome" id="welcome">
-    	<br><br><br>
-    	<p >Selamat Datang di</p>
-    	<img class="homeimg" src="images/logo.png" >
-    	<p >Tempat Pelestarian Karya Lukis Budaya Indonesia</p>
+    <a class="kirimpesan" href="kirimpesan.html">Kotak Soerat</a>
+    //End nampilin menu title
+
+    //Start nampilin gambar logo
+    <div>
+        <img class="logo" src="images/logo.png">
     </div>
+    //End nampilin gambar logo
 
+    //Nampilin live clock
+    <div id="clockdisplay" class="container"></div>
 
 </body>
 </html>

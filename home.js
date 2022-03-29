@@ -1,50 +1,43 @@
-var id = null;
+function rendertime(){
+    //date
+    var mydate = new Date();
+    var year = mydate.getFullYear();
+        if (year < 1000){
+            year += 1900;
+        }
+    var day = mydate.getDay();
+    var month = mydate.getMonth();
+    var daym = mydate.getDate();
+    var dayarray = new Array("Ahad,", "Senin,", "Selasa,", "Raboe,", "Kamis,", "Joemat,", "Sabtoe,");
+    var montharray = new Array("Januari", "Pebruari", "Maret", "April", "Mei", "Joeni", "Joeli", "Agoestoes", "September", "Oktober", "Nopember", "Desember");
+    //date
 
-function Test() {
-	alert("Hi Hi");
-}
+    //time
+    var currenttime = new Date();
+    var h = currenttime.getHours();
+    var m = currenttime.getMinutes();
+    var s = currenttime.getSeconds();
+        if(h == 24){
+            h = 0;
+        } else if(h > 12){
+            h = h - 0;
+        }
+        if(h < 10){
+            h = "0" + h;
+        }
+        if(m < 10){
+            m = "0" + m;
+        }
+        if(s < 10){
+            s = "0" + s;
+        }
 
-function AnimasiWelcome() {
-	var pos = 1;
-	var div = document.getElementById("welcome");
-	var baki = document.getElementById("baki");
-	baki.style.opacity = 0;
-	clearInterval(id);
-	id = setInterval(fadein, 10);
-	var i = 0;
-	function fadein() {
-		if (pos == 450) {
-    		clearInterval(id);
-			
-    		div.style.opacity = 1;
-    		baki.style.opacity = 1;
-    		pos = 0;
-    		id = setInterval(hover,4);
-    		
-   		} else {
-  			pos++;
-    		div.style.marginTop = (pos/10) - 50 +'%';
-  	  		div.style.opacity = (pos * (1/500));
-  	  		baki.style.opacity = (pos * (1/500))-0.6;
- 	   	}
-	}
-    var increase = true;
-	function hover(){
-    	if (pos == 1000) {
-    		increase = false;
-    		pos--;
-    	}else if(pos == -200) {
-    		increase = true;
-    		pos++;
-    	}else{
-    		if(increase == true){
-    			pos++;
-    		}else{
-    			pos--;
-    		}
-    		div.style.marginLeft = (pos/5) + "px";
-    		div.style.marginBottom = (pos/5) + "px";
-    	}
-    }
+    var myclock = document.getElementById("clockdisplay");
+    myclock.textContent = " " + dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
+    myclock.innerText = " " + dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
+    
+    setTimeout("rendertime()", 1000);
 }
+rendertime();
+
 
