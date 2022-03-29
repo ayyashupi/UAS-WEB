@@ -54,7 +54,7 @@ body {
 }
 
 .homeimg{
-	width: 40%;
+	width: 750px;
     display: block;
     margin: auto;
 }
@@ -64,4 +64,10 @@ p{
     color: white;
     font-size: 40px;
     text-align: center;
+}
+
+.welcome{
+	display: block;	
+	margin: auto;
+	/*margin-top: -45%;	*/
 }
