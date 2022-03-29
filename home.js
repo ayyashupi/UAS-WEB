@@ -8,13 +8,15 @@ function AnimasiWelcome() {
 	var pos = 1;
 	var div = document.getElementById("welcome");
 	clearInterval(id);
-	id = setInterval(hover,4);
-	//id = setInterval(fadein, 10);
+	id = setInterval(fadein, 10);
 	var i = 0;
 	function fadein() {
 		if (pos == 450) {
     		clearInterval(id);
+			
     		div.style.opacity = 1;
+    		pos = 0;
+    		id = setInterval(hover,4);
     		
    		} else {
   			pos++;
@@ -22,8 +24,6 @@ function AnimasiWelcome() {
   	  		div.style.opacity = (pos * (1/500));
  	   	}
 	}
-
-	pos = 0;
     var increase = true;
 	function hover(){
     	if (pos == 1000) {
