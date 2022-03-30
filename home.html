@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="home.css">
 <head>
-	<title>Teras</title>
+    <script type="text/javascript" src="home.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+	<title>Loekis (Galeri Lukisan Lawas Nusantara).</title>
 </head>
-<body>	
+<body onload="rendertime();">	
     
+    <a class="about" href="about.html">Tentang Kami</a>
 
-    <a href="home.html"><img class="logo" src="images/logo.png"></a>
+    <a class="galeri" href="galeri.html">Baki Tjitra</a>
 
-
-    <a class="about" href="KirimPesan.html">About Us</a>
-
-    <a class="baki" href="KirimPesan.html">Baki Tjitra</a>
-
-    <a class="soerat" href="KirimPesan.html">Kotak Soerat</a>
+    <a class="kirimpesan" href="kirimpesan.html">Kotak Soerat</a>
 
     <div>
-    	<br><br><br>
-    	<p>Selamat Datang di</p>
-    	<img class="homeimg" src="images/logo.png">
-    	<p>Tempat Pelestarian Karya Lukis Budaya Indonesia</p>
+        <img class="logo" src="images/logo.png">
     </div>
 
+    <div id="clockdisplay" class="container"></div>
 
 </body>
 </html>
