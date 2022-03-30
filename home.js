@@ -19,7 +19,7 @@ function AnimasiWelcome() {
     		div.style.opacity = 1;
     		baki.style.opacity = 1;
     		pos = 0;
-    		id = setInterval(hover,4);
+    		// id = setInterval(hover,4);
     		
    		} else {
   			pos++;
@@ -30,23 +30,23 @@ function AnimasiWelcome() {
  	   	}
 	}
     var increase = true;
-	function hover(){
-    	if (pos == 1000) {
-    		increase = false;
-    		pos--;
-    	}else if(pos == -1000) {
-    		increase = true;
-    		pos++;
-    	}else{
-    		if(increase == true){
-    			pos++;
-    		}else{
-    			pos--;
-    		}
-    		div.style.left = (pos/200) + 15 + "%";
-            div.style.marginTop = 0;
-    		div.style.top =((pos/400)+1) + "%";
-    	}
-    }
+	// function hover(){
+ //    	if (pos == 1000) {
+ //    		increase = false;
+ //    		pos--;
+ //    	}else if(pos == -1000) {
+ //    		increase = true;
+ //    		pos++;
+ //    	}else{
+ //    		if(increase == true){
+ //    			pos++;
+ //    		}else{
+ //    			pos--;
+ //    		}
+ //    		div.style.left = (pos/200) + 15 + "%";
+ //            div.style.marginTop = 0;
+ //    		div.style.top =((pos/400)+1) + "%";
+ //    	}
+ //    }
 }
 

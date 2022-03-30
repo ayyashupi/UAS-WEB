@@ -1,0 +1,102 @@
+@font-face {
+    font-family: arialn;
+    src: url(fonts/ARIALN.TTF);
+
+}
+
+@font-face {
+    font-family: Freehand;
+    src: url(fonts/freehand.TTF);
+}
+
+body {
+    background-image: url("images/background.png");
+    background-size: cover;
+}
+
+a:link {
+    text-decoration: none;
+  }
+a:visited {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+.about{
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    color: white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    bottom: 2%;
+    left: 1%;
+    font-family: "Freehand";
+    color: white;
+    font-size: 220%;
+} .about:hover {
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+
+.logo {
+    width: 10%;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+
+}
+
+.baki{
+	display: block;
+	margin: auto;
+	margin-top: 1%;
+	text-align: center;
+    text-decoration: none;
+    display: block;
+    color: white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    font-family: "Freehand";
+    color: white;
+    font-size: 220%;
+} .baki:hover{
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.soerat{
+	text-decoration: none;
+    display: block;
+    position: absolute;
+    color: white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    top: 2%;
+    right: 2%;
+    font-family: "Freehand";
+    color: white;
+    font-size: 220%;
+} .soerat:hover{
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
