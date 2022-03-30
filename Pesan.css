@@ -1,3 +1,46 @@
+@font-face {
+    font-family: vogue;
+    src: url(fonts/CupheadVogue-Bold.otf);
+
+}
+
+@font-face {
+    font-family: Freehand;
+    src: url(fonts/freehand.TTF);
+}
+
+.hrf {
+    font-family: "freehand";
+}
+
+.lukis{
+	position: absolute;
+	top: 69%;
+	left: 76%;
+    font-size: 700%;
+}
+
+.kop {
+    position: absolute;
+    top: 10%;
+    left: 83%;
+}
+
+.kop1{
+    display: block;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 4%;
+    width:  80%;
+    height: 60%;
+    border-radius: 5px;
+    object-fit: cover;
+    align-content:  center;
+    object-position: center;
+    box-shadow: 10px 10px rgb(0 0 0 /0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
 
 .garis{
     height: 80%;
@@ -11,13 +54,44 @@
 
 
     
-input.tab-menu-radio {
+/*
+ CSS main
+*/
+.tabset > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+    top: 10%;
+    ;
+  }
+  
+  .tabset .tab-panel {
     display: none;
-    }
-    label.tab-menu {
+  }
+  
+  .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+  .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+  .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+  .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+  .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+  }
+  
+  /*
+   isinyaaaa
+  */
+  body {
+    font: 16px/1.5em "vogue";
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+  }
+  
+  .tabset > label {
+    position: relative;
     display: inline-block;
-    float: left;
-    padding:10px 30px;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
     cursor: pointer;
     z-index: 99;
     }
@@ -31,6 +105,53 @@ input.tab-menu-radio {
     background-color: #f7f7f7;
     border-top:7px solid #333;
     }
+    font-weight: 600;
+    font-size: 150%;
+  }
+  
+  .tabset > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    background: #8d8d8d;
+  }
+  
+  .tabset > label:hover,
+  .tabset > input:focus + label {
+    color: rgb(255, 217, 0);
+  }
+  
+  .tabset > label:hover::after,
+  .tabset > input:focus + label::after,
+  .tabset > input:checked + label::after {
+    background: rgb(255, 217, 0);
+  }
+  
+  .tabset > input:checked + label {
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+  }
+  
+  .tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+    font-size: 150%;
+  }
+  
+  
+  /* body buat ngatur posisi tabnya
+  */
+  body {
+    padding: 200px;
+  }
+  
+  .tabset {
+    max-width: 45em;
+  }
     
     .tab-menu-radio:checked + label {
     -webkit-transition:all 1s; 
