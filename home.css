@@ -1,14 +1,16 @@
 
 .homeimg{
-	width: 60%;
+	width: 55%;
     display: block;
-    margin: auto;
+    position:absolute;
+    left: 23%;
+    top: 23%;
 }
 
 p{
-	font-family: "Freehand";
+	font-family: "vogue";
     color: white;
-    font-size: 220%;
+    font-size: 280%;
     text-align: center;
 }
 
