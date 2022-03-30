@@ -9,12 +9,6 @@
     src: url(fonts/freehand.TTF);
 }
 
-
-body{
-	background-image: url("images/background.png");
-	background-size: cover;
-}
-
 .garis{
 
     height: 80%;
