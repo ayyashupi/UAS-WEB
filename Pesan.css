@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @font-face {
     font-family: arialn;
     src: url(fonts/ARIALN.TTF);
@@ -7,6 +8,12 @@
 @font-face {
     font-family: Freehand;
     src: url(fonts/freehand.TTF);
+=======
+
+body{
+	background-image: url("images/background.png");
+	background-size: cover;
+>>>>>>> Stashed changes
 }
 
 .garis{
