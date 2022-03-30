@@ -1,47 +1,46 @@
 
 p{	
-	margin-left: 10%;
-	margin-top: 0%;
+	/*margin-left: 10%;*/
+	margin-top: -5%;
 	font-size: 200%;
 	font-family: "vogue";
     text-align: center;
 	color: white;
 }
 
+div{
+	/*background-color: black;*/
+    width: 25%;
+}
+
 .top{
-	width: 140%;
-    margin-left: -10%;
+	margin-top: 5%;
 }
 
 /* container */
 .pprofil {
-    width: 15%;
     position: absolute;
 	top: 20%;
-	left: 10%;
+	left: 8%;
 
 }
 .pprofil2 {
-    width: 15%;
     position: absolute;
 	top: 20%;
-	left: 41.7%;
+	left: 38%;
 
 }
 .pprofil3 {
-    width: 15%;
     position: absolute;
 	top: 20%;
-	left: 73%;
+	left: 68%;
 }
 /* isi container */
 .container{
 	display: block;
 	margin: auto;
-	margin-left: 17%;
-	margin-top: 4%;
-	width:  80%;
-	height: 60%;
+	margin-top: 5%;
+	width: 50%;
 	border-radius: 5px;
 	object-fit: cover;
 	align-content: center;
