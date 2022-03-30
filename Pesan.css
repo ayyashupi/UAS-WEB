@@ -18,6 +18,11 @@
 	top: 69%;
 	left: 76%;
     font-size: 700%;
+.body3{
+	opacity: 0;
+  transition: opacity 2s;
+	background-image: url("images/kopsurat.png");
+  background-size: cover;
 }
 
 .kop {
@@ -51,8 +56,6 @@
     display: block;
     background-color: white;
 }
-
-
     
 /*
  CSS main
@@ -147,6 +150,7 @@
   */
   body {
     padding: 200px;
+    padding: 140px;
   }
   
   .tabset {
