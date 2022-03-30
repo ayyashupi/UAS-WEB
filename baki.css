@@ -1,18 +1,3 @@
-@font-face {
-    font-family: Freehand;
-    src: url(fonts/freehand.TTF);
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url(fonts/roboto.TTF);
-}
-
-body{
-	background-image: url("images/background.png");
-	background-size: cover;
-}
-
 div{
 	width: 25%;
 	height: 34%;
@@ -82,46 +67,6 @@ p{
 	font-family: "Roboto";
 	color: white;
 }
-
-.logo {
-    width: 10%;
-    display: block;
-    position: absolute;
-    top: 2%;
-    left: 1%;
-
-}
-
-.about{
-	display: block;
-	position: absolute;
-    bottom: 2%;
-    left: 1%;
-    font-family: "Freehand";
-    color: white;
-    font-size: 220%;
-}
-
-.baki{
-	display: block;
-	margin: auto;
-	margin-top: 1%;
-	text-align: center;
-    font-family: "Freehand";
-    color: white;
-    font-size: 220%;
-}
-
-.soerat{
-	display: block;
-	position: absolute;
-    top: 2%;
-    right: 2%;
-    font-family: "Freehand";
-    color: white;
-    font-size: 220%;
-}
-
 .modal{
 	display: none;
 }
