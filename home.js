@@ -23,8 +23,8 @@ function AnimasiWelcome() {
     		
    		} else {
   			pos++;
-            div.style.left = 15+"%";
-    		div.style.marginTop = -5 +'%';
+            // div.style.left = 15+"%";
+    		// div.style.marginTop = -5 +'%';
   	  		div.style.opacity = (pos * (1/500));
   	  		baki.style.opacity = (pos * (1/500))-0.6;
  	   	}
