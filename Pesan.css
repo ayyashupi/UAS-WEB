@@ -1,0 +1,72 @@
+@font-face {
+    font-family: arialn;
+    src: url(fonts/ARIALN.TTF);
+
+}
+
+@font-face {
+    font-family: Freehand;
+    src: url(fonts/freehand.TTF);
+}
+
+
+body{
+	background-image: url("images/background.png");
+	background-size: cover;
+}
+
+.garis{
+
+    height: 80%;
+    position: absolute;
+    width: 0.3%;
+    top: 10%;
+    left: 50%;
+    display: block;
+    background-color: white;
+}
+
+
+    
+input.tab-menu-radio {
+    display: none;
+    }
+    label.tab-menu {
+    display: inline-block;
+    float: left;
+    padding:10px 30px;
+    cursor: pointer;
+    z-index: 99;
+    }
+    
+    .tab-content {
+    top:-3px;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding:20px;
+    background-color: #f7f7f7;
+    border-top:7px solid #333;
+    }
+    
+    .tab-menu-radio:checked + label {
+    -webkit-transition:all 1s; 
+    -moz-transition:all 1s; 
+    transition:all 1s; 
+    background-color: #333;
+    color: #fff;
+    }
+    .tab-content .tab {
+    height: 0;
+    opacity: 0;
+    }
+    #tab-menu1:checked ~ .tab-content .tab-1,
+    #tab-menu2:checked ~ .tab-content .tab-2,
+    #tab-menu3:checked ~ .tab-content .tab-3 {
+    -webkit-transition:opacity 1s; 
+    -moz-transition:opacity 1s; 
+    transition:opacity 1s; 
+    height: auto;
+    opacity: 1;
+    }
+    
