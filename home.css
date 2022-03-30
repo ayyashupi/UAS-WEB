@@ -30,7 +30,7 @@ body {
     left: 1%;
     font-family: "Freehand";
     color: white;
-    font-size: 40px;
+    font-size: 220%;
 }
 
 .baki{
@@ -40,7 +40,7 @@ body {
 	text-align: center;
     font-family: "Freehand";
     color: white;
-    font-size: 40px;
+    font-size: 220%;
 }
 
 .soerat{
@@ -50,11 +50,11 @@ body {
     right: 2%;
     font-family: "Freehand";
     color: white;
-    font-size: 40px;
+    font-size: 220%;
 }
 
 .homeimg{
-	width: 750px;
+	width: 40%;
     display: block;
     margin: auto;
 }
@@ -62,11 +62,12 @@ body {
 p{
 	font-family: "Freehand";
     color: white;
-    font-size: 40px;
+    font-size: 220%;
     text-align: center;
 }
 
 .welcome{
+    position: absolute;
 	display: block;	
 	margin: auto;
 	/*margin-top: -45%;	*/

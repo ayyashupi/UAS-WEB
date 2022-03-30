@@ -14,8 +14,8 @@ body{
 }
 
 div{
-	width: 470px;
-	height: 330px;
+	width: 25%;
+	height: 34%;
 	background-color: #1A1919;
 	border-radius: 15px;
 	box-shadow: 10px 10px rgb(0 0 0 /0.8);
@@ -24,10 +24,10 @@ div{
 .container{
 	display: block;
 	margin: auto;
-	margin-left: 55px;
-	margin-top: 20px;
-	width:  350px;
-	height: 200px;
+	margin-left: 10%;
+	margin-top: 4%;
+	width:  80%;
+	height: 60%;
 	border-radius: 5px;
 	object-fit: cover;
 	align-content:  center;
@@ -76,9 +76,9 @@ div{
 
 }
 p{	
-	margin-left: 55px;
-	margin-top: -15px;
-	font-size: 20px;
+	margin-left: 10%;
+	margin-top: -3%;
+	font-size: 130%;
 	font-family: "Roboto";
 	color: white;
 }
@@ -99,7 +99,7 @@ p{
     left: 1%;
     font-family: "Freehand";
     color: white;
-    font-size: 40px;
+    font-size: 220%;
 }
 
 .baki{
@@ -109,7 +109,7 @@ p{
 	text-align: center;
     font-family: "Freehand";
     color: white;
-    font-size: 40px;
+    font-size: 220%;
 }
 
 .soerat{
@@ -119,7 +119,7 @@ p{
     right: 2%;
     font-family: "Freehand";
     color: white;
-    font-size: 40px;
+    font-size: 220%;
 }
 
 .modal{

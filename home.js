@@ -23,6 +23,7 @@ function AnimasiWelcome() {
     		
    		} else {
   			pos++;
+            div.style.left = 15+"%";
     		div.style.marginTop = (pos/10) - 50 +'%';
   	  		div.style.opacity = (pos * (1/500));
   	  		baki.style.opacity = (pos * (1/500))-0.6;
@@ -33,7 +34,7 @@ function AnimasiWelcome() {
     	if (pos == 1000) {
     		increase = false;
     		pos--;
-    	}else if(pos == -200) {
+    	}else if(pos == -1000) {
     		increase = true;
     		pos++;
     	}else{
@@ -42,8 +43,9 @@ function AnimasiWelcome() {
     		}else{
     			pos--;
     		}
-    		div.style.marginLeft = (pos/5) + "px";
-    		div.style.marginBottom = (pos/5) + "px";
+    		div.style.left = (pos/400) + 15 + "%";
+            div.style.marginTop = 0;
+    		div.style.top =((pos/400)+1) + "%";
     	}
     }
 }
