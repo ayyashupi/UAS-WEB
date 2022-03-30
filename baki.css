@@ -34,11 +34,10 @@ div{
 	left: 50%;
   	display: block;
  	width: 80%;
-  	max-width: 700px;
+  	max-width: 38%;
  	text-align: justify;
   	color: #ccc;
   	padding: 10px 0;
-  	height: 150px;
 }
 
 .caption { 
@@ -49,11 +48,11 @@ div{
 	left: 50%;
   	display: block;
  	width: 80%;
-  	max-width: 700px;
+  	max-width: 38%;
  	text-align: justify;
   	color: #ccc;
   	padding: 10px 0;
-  	height: 150px;
+
 }
 
 .container{
@@ -129,7 +128,7 @@ p{
 	display: none; 
  	position: fixed; /* Stay in place */
   	z-index: 1; /* Sit on top */
-  	padding-top: 100px; /* Location of the box */
+  	padding-top: 5%; /* Location of the box */
   	left: 0;
   	top: 0;
   	width: 100%; /* Full width */
