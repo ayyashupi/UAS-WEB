@@ -21,7 +21,9 @@ div{
 	left: 2%;
 	display: block;
 	width: 80%;
-  	max-width: 700px;
+  	max-width: 47%;
+  	max-height: 93%;
+  	object-fit: scale-down;
 }
 
 .deskripsigambar{
