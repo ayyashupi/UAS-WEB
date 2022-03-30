@@ -1,0 +1,51 @@
+
+p{	
+	margin-left: 10%;
+	margin-top: 0%;
+	font-size: 200%;
+	font-family: "vogue";
+    text-align: center;
+	color: white;
+}
+
+.top{
+	width: 140%;
+    margin-left: -10%;
+}
+
+/* container */
+.pprofil {
+    width: 15%;
+    position: absolute;
+	top: 20%;
+	left: 10%;
+
+}
+.pprofil2 {
+    width: 15%;
+    position: absolute;
+	top: 20%;
+	left: 41.7%;
+
+}
+.pprofil3 {
+    width: 15%;
+    position: absolute;
+	top: 20%;
+	left: 73%;
+}
+/* isi container */
+.container{
+	display: block;
+	margin: auto;
+	margin-left: 17%;
+	margin-top: 4%;
+	width:  80%;
+	height: 60%;
+	border-radius: 5px;
+	object-fit: cover;
+	align-content: center;
+	object-position: center;
+	box-shadow: 10px 10px rgb(0 0 0 /0.1);
+	
+}
