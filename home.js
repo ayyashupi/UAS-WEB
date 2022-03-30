@@ -43,7 +43,7 @@ function AnimasiWelcome() {
     		}else{
     			pos--;
     		}
-    		div.style.left = (pos/400) + 15 + "%";
+    		div.style.left = (pos/200) + 15 + "%";
             div.style.marginTop = 0;
     		div.style.top =((pos/400)+1) + "%";
     	}

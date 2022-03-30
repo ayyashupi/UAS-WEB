@@ -67,6 +67,7 @@ p{
 }
 
 .welcome{
+    pointer-events: none;
     position: absolute;
 	display: block;	
 	margin: auto;
