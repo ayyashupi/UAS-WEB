@@ -164,9 +164,12 @@
 			"<br><br> "; 
 			
 			desk.innerHTML = "Deskripsi "+tipe+" : <br>"+ txtdesk.value;
+			var text = txtdesk.value;
 
-			if(txtdesk.value.length >250){
+			if(text.length > 165){
 				wadah.style.overflowY = "Scroll";
+			}else{
+				wadah.style.overflowY = "none";
 			}
 		}
 

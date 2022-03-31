@@ -272,9 +272,9 @@ textarea{
 .caption{
     font-size: 220%;
     /*position: relative;*/
-    max-width: 95%;
+    max-width: 93%;
     position: absolute;
-    left: 2%;
+    left: 4%;
     /*top: 31%;*/
     /*line-height: 1;*/
 }
@@ -283,9 +283,9 @@ textarea{
     font-size: 180%;
     text-align: justify;
     /*position: relative;*/
-    max-width: 95%;
+    max-width: 93%;
     position: absolute;
-    left: 2%;
+    left: 4%;
 
     line-height: 1.5;
 }
