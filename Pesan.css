@@ -20,7 +20,11 @@
     font-size: 700%;
 }
 
+
 .body3{
+    /*filter: invert(100%);*/
+    /*filter: invert(100%);*/
+    /*mix-blend-mode: difference;*/
 	opacity: 0;
     transition: opacity 2s;
 	background-image: url("images/kopsurat.png");

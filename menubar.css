@@ -16,8 +16,12 @@ body {
     transition: opacity 2s;
     background-image: url("images/background3.png");
     background-size: cover;
+    /*position: absolute;*/
+    /*filter: invert(100%);*/
 }
+
 .body2 {
+    /*filter: invert(100%);*/
     opacity: 0;
     transition: opacity 2s;
     background-image: url("images/background.png");

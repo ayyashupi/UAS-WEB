@@ -44,6 +44,6 @@ div{
 	object-fit: cover;
 	align-content: center;
 	object-position: center;
-	box-shadow: 10px 10px rgb(0 0 0 /0.1);
+	box-shadow: 10px 10px rgb(0 0 0 /0.0);
 	
 }
