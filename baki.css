@@ -6,6 +6,8 @@ div{
 	box-shadow: 10px 10px rgb(0 0 0 /0.8);
 }
 
+
+
 .modal-container{
 	width: 80%;
 	height: 80%;
@@ -110,9 +112,25 @@ div{
 	left: 66%;
 }
 
+.reportcs {
+	margin-top: -45px;
+	margin-left: 400px;
+	display: block;
+	cursor: pointer;
+	font-family: "vogue";
+	background-color: transparent;
+	color: rgb(255, 0, 0);
+	border: none;
+} .reportcs:hover {
+	filter: drop-shadow(0 0 0.75rem rgb(255, 0, 0));
+	
+}
+
+A:link {text-decoration: none}
+
+
 .top{
 	margin-top: 10px;
-
 }
 p{	
 	margin-left: 10%;
@@ -121,7 +139,6 @@ p{
 	font-family: "vogue";
 	color: white;
 }
-
 
 /*MODAL Starts From here*/
 .modal{
