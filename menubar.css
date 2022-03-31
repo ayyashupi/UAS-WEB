@@ -2,12 +2,10 @@
     font-family: vogue;
     src: url(fonts/CupheadVogue-Bold.otf);
 }
-
 @font-face {
     font-family: canyon;
     src: url(fonts/canyon.OTF);
 }
-
 @font-face {
     font-family: Freehand;
     src: url(fonts/freehand.TTF);
