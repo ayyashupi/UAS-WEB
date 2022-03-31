@@ -1,13 +1,15 @@
 @font-face {
     font-family: vogue;
     src: url(fonts/CupheadVogue-Bold.otf);
-
 }
 
 @font-face {
     font-family: Freehand;
     src: url(fonts/freehand.TTF);
+    /*font-size: thin;*/
 }
+
+
 
 .hrf {
     font-family: "freehand";
@@ -18,17 +20,20 @@
 	top: 69%;
 	left: 76%;
     font-size: 700%;
+}
 .body3{
 	opacity: 0;
-  transition: opacity 2s;
+    transition: opacity 2s;
 	background-image: url("images/kopsurat.png");
-  background-size: cover;
+    background-size: cover;
 }
 
 .kop {
+    display: none;
     position: absolute;
     top: 10%;
-    left: 83%;
+    right: 5%;
+    max-width: 30%;
 }
 
 .kop1{
@@ -64,42 +69,41 @@
     position: absolute;
     left: -200vw;
     top: 10%;
-    ;
-  }
-  
-  .tabset .tab-panel {
+}
+.tab-panel {
     display: none;
-  }
+}
   
-  .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
-  .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
-  .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
-  .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
-  .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-  .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
     display: block;
-  }
+}
   
   /*
    isinyaaaa
   */
-  body {
+body {
     font: 16px/1.5em "vogue";
     color: rgb(255, 255, 255);
     font-weight: 300;
-  }
+}
   
-  .tabset > label {
+.tabset > label {
     position: relative;
     display: inline-block;
     padding: 15px 15px 25px;
     border: 1px solid transparent;
     border-bottom: 0;
     cursor: pointer;
+    font-size: 150%;
     z-index: 99;
-    }
+}
     
-    .tab-content {
+.tab-content {
     top:-3px;
     clear: both;
     width: 100%;
@@ -107,12 +111,9 @@
     padding:20px;
     background-color: #f7f7f7;
     border-top:7px solid #333;
-    }
-    font-weight: 600;
-    font-size: 150%;
-  }
+}
   
-  .tabset > label::after {
+.tabset > label::after {
     content: "";
     position: absolute;
     left: 15px;
@@ -120,61 +121,114 @@
     width: 22px;
     height: 4px;
     background: #8d8d8d;
-  }
+}
   
-  .tabset > label:hover,
-  .tabset > input:focus + label {
+.tabset > label:hover,
+.tabset > input:focus + label {
     color: rgb(255, 217, 0);
-  }
+}
   
-  .tabset > label:hover::after,
-  .tabset > input:focus + label::after,
-  .tabset > input:checked + label::after {
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
     background: rgb(255, 217, 0);
-  }
+}
   
-  .tabset > input:checked + label {
+.tabset > input:checked + label {
     border-color: #ccc;
     border-bottom: 1px solid #fff;
     margin-bottom: -1px;
-  }
+}
   
-  .tab-panel {
+.tab-panel {
     padding: 30px 0;
     border-top: 1px solid #ccc;
     font-size: 150%;
-  }
+}
   
   
   /* body buat ngatur posisi tabnya
   */
-  body {
+  /*body {
     padding: 200px;
     padding: 140px;
-  }
+  }*/
   
-  .tabset {
+.tabset {
     max-width: 45em;
-  }
+    margin-top: 7%;
+    margin-left: 9%;
+} 
     
-    .tab-menu-radio:checked + label {
+.tab-menu-radio:checked + label {
     -webkit-transition:all 1s; 
     -moz-transition:all 1s; 
     transition:all 1s; 
     background-color: #333;
     color: #fff;
-    }
-    .tab-content .tab {
-    height: 0;
+}
+    
+.tab {
+    height: 0;   
     opacity: 0;
-    }
-    #tab-menu1:checked ~ .tab-content .tab-1,
-    #tab-menu2:checked ~ .tab-content .tab-2,
-    #tab-menu3:checked ~ .tab-content .tab-3 {
+}
+    
+#tab-menu1:checked ~ .tab-content .tab-1,
+#tab-menu2:checked ~ .tab-content .tab-2,
+#tab-menu3:checked ~ .tab-content .tab-3 {
     -webkit-transition:opacity 1s; 
     -moz-transition:opacity 1s; 
     transition:opacity 1s; 
     height: auto;
     opacity: 1;
-    }
-    
+}
+
+.about{
+    bottom: 5%;
+    left: 2%;
+}
+
+.baki{
+    top: 5%;
+}
+
+.soerat{
+    top: 5%;
+}
+
+
+.button{
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    width: 10%;
+    /*height: 60%;*/
+    left: 39%;
+    cursor: pointer;
+    font-family: "freehand";
+    background-color: transparent;
+    color: white;
+    /*outline: none;
+    overflow: hidden;*/
+    border: none;
+    font-size: 220%;
+}z-index
+
+input{
+    font-family: "vogue";
+    font-size: 100%;
+}
+
+textarea{
+    font-family: "vogue";
+    font-size: 100%;
+    height: 100px;
+    resize: none;
+}
+
+.head{
+    font-size: 110%;
+    font-family: "freehand";
+    margin-bottom: -2%;
+    /*font-style: thin;*/
+}
