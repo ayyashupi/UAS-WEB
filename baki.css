@@ -2,7 +2,7 @@ div{
 	width: 25%;
 	height: 34%;
 	background-color: #1A1919;
-	border-radius: 15px;
+	border-radius: 4%;
 	box-shadow: 10px 10px rgb(0 0 0 /0.8);
 }
 
@@ -10,7 +10,7 @@ div{
 	width: 80%;
 	height: 80%;
 	background-color: #1A1919;
-	border-radius: 10px;
+	border-radius: 3%;
 	margin: auto;
 	/*box-shadow: 10px 10px rgb(0 0 0 /0.8);*/
 }
@@ -37,7 +37,7 @@ div{
 	max-width: 38%;
 	text-align: justify;
 	color: #ccc;
-	padding: 10px 0;
+	padding: 3%;
 }
 
 .caption { 
@@ -51,7 +51,7 @@ div{
 	max-width: 38%;
 	text-align: justify;
 	color: #ccc;
-	padding: 10px 0;
+	padding: 3% ;
 
 }
 
@@ -62,7 +62,7 @@ div{
 	margin-top: 4%;
 	width:  80%;
 	height: 60%;
-	border-radius: 5px;
+	border-radius: 2%;
 	object-fit: cover;
 	align-content:  center;
 	object-position: center;
@@ -111,14 +111,15 @@ div{
 }
 
 .reportcs {
-	margin-top: -45px;
-	margin-left: 400px;
+	margin-top: -10%;
+	margin-left: 80%;
 	display: block;
 	cursor: pointer;
 	font-family: "vogue";
 	background-color: transparent;
 	color: #F75052;
 	border: none;
+	font-size: 0.8vw;
 } 
 .reportcs:hover {
 	filter: drop-shadow(0 0 0.75rem rgb(255, 0, 0));
@@ -129,12 +130,12 @@ a:link {text-decoration: none}
 
 
 .top{
-	margin-top: 10px;
+	margin-top: 2%;
 }
 p{	
 	margin-left: 10%;
 	margin-top: -3%;
-	font-size: 130%;
+	font-size: 1vw;
 	font-family: "vogue";
 	color: white;
 }
@@ -173,10 +174,10 @@ p{
 
 .close {
 	position: absolute;
-	top: 15px;
-	right: 35px;
+	top: 2%;
+	right: 2%;
 	color: #f1f1f1;
-	font-size: 40px;
+	font-size: 3vw;
 	font-weight: bold;
 	transition: 0.3s;
 }
