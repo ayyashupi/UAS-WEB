@@ -212,6 +212,7 @@ body {
     overflow: hidden;*/
     border: none;
     font-size: 220%;
+    /*z-index: 1000;*/
 }
 
 input{
