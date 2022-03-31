@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 	<link rel="stylesheet" type="text/css" href="menubar.css">
 	<link rel="stylesheet" type="text/css" href="Pesan.css">
 	<link rel="icon" href="images/icon.png" type="image/png">
 <head>
 	<title>Kotak Soerat (Kirim Pesan)</title>
 </head>
-<body class="body3" onload="document.body.style.opacity='1'">
 
+<body class="body3" onload="document.body.style.opacity='1'">
 	
 	<a href="home.html"><img class="logogmbr" src="images/logo.png"></a>
 
@@ -24,6 +23,7 @@
 	<div class="kop">
 		<img src="images/stamp.PNG" class="kop1">
 	</div>
+
 	<div class="tabset">
 		<!-- Tab 1 -->
 		<input type="radio" name="tabset" id="tab1" aria-controls="Lapor" checked>
@@ -36,8 +36,7 @@
 		<label for="tab3" class="head">Pesan</label>
 		
 		<div class="tab-panels">
-
-		  <section id="Lapor" class="tab-panel">
+			<section id="Lapor" class="tab-panel">
 			<p class="head" style="font-size: 160%; margin-bottom: 0%;">Laporan masalah</p>
 			<p>Laporkan masalah jika ada masalah pada website dipersilahkan untuk melaporkan ke kami dengan senang hati kami menerima laporan sebagai pengembangan website kami. Dalam bentuk kami bisa berterima kasih kami membutuhkan identitas pelapor sehingga kami bisa memberikan feedback atas laporan yang telah sudah kami dapatkan.</p>
 			<!-- <p class="head">Nama</p> -->
@@ -47,46 +46,56 @@
 			<!-- <p class="head">Deskripsi Laporan</p> -->
 			<p><textarea placeholder="Deskripsi Laporan" rows="7" cols="40" name="teks.l" id="DeskP"></textarea></p>
 			<button class="button" id="btnPesan">Submit</button>
-		</section>
+			</section>
 
-		  <section id="Permintaan" class="tab-panel">
+			<section id="Permintaan" class="tab-panel">
 			<p class="head" style="font-size: 160%; margin-bottom: 0%;">Permintaan Mengunggah Karya</p>
 			<p>Kami membuka peluang untuk masyarakat umum yang ingin mempublikasikan karyanya. pada form ini dipersilahkan untuk mengirim soerat terbuka kepada kami agar kami bisa menampilkan karya mu.</p>
 			<!-- <p class="head">Nama</p> -->
-			<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaP"></p>
+			<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaK"></p>
 			<!-- <p class="head">Surel</p> -->
-			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailP"></p>
+			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailK"></p>
 			<!-- <p class="head">Deskripsi Laporan</p> -->
-			<p><textarea placeholder="Deskripsi Permintaan" rows="7" cols="40" name="teks.l" id="DeskP"></textarea></p>
+			<p><textarea placeholder="Deskripsi Permintaan" rows="7" cols="40" name="teks.l" id="DeskK"></textarea></p>
 			<button class="button" id="btnKarya">Submit</button>
-		  </section>
+			</section>
 
-		  <section id="PesanKesan" class="tab-panel">
+			<section id="PesanKesan" class="tab-panel">
 			<p class="head" style="font-size: 160%; margin-bottom: 0%;">Pesan Kesan</p>
 			<p>Salah satu kemampuan manusia yang sangat menakjubkan adalah kemampuan untuk mengkomunikasikan perasaanya kepada manusia lainya. Tab ini membantu kamu untuk mengkomunikasikan apa yang ada di hati mu kepada kami.</p>
 			<!-- <p class="head">Nama</p> -->
-			<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaP"></p>
+			<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaD"></p>
 			<!-- <p class="head">Surel</p> -->
-			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailP"></p>
+			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailD"></p>
 			<!-- <p class="head">Deskripsi Laporan</p> -->
-			<p><textarea placeholder="Pesan" rows="7" cols="40" name="teks.l" id="DeskP"></textarea></p>
-			<button class="button" id="btnDesk">Submit</button>
-		  </section>
+			<p><textarea placeholder="Pesan" rows="7" cols="40" name="teks.l" id="DeskD"></textarea></p>
+			<button class="button" id="btnDesk" onclick="TampilNotif()">Submit</button>
+			</section>
 		</div>
-		
 	  </div>
 
-	  <div class="lukis"></div>
+	<div class="lukis"></div>
 		<!-- <h2><strong>Loekis</h2> -->
 
 	<div class="tab-container"></div>
 
+	<div class="notif" id="notif">
+		<!-- <span class="close" id="close">&times;</span> -->
+		<span class="close" id="close2">&times;</span>
+		<div class="wadahnotif" id="wadah">
+			<span class="close" id="close">&times;</span>
+			<p class="caption" id="caption">
+  			Terima Kasih Telah Mengirimkan Laporan</p>
+  			<p class="desk" id="desk">
+  				
+  			</p>
+		</div>
+  		
 
-	  </div>
+	</div>
 	  
-	 <script type="text/javascript">
-	 	// alert("Test 1");
-
+	<script type="text/javascript">
+		// alert("Test 1");
 		var btnPesan = document.getElementById("btnPesan");
 		var txtnamap	= document.getElementById("NamaP");
 		var txtemailp	= document.getElementById("EmailP");
@@ -98,30 +107,82 @@
 		var txtdeskk	= document.getElementById("DeskK");
 
 		var btnDesk = document.getElementById("btnDesk");
-		var txtnamad	= document.getElementById("NamaD");
-		var txtemaild	= document.getElementById("EmailD");
-		var txtdeskd	= document.getElementById("DeskD");
+		var txtnamad = document.getElementById("NamaD");
+		var txtemaild = document.getElementById("EmailD");
+		var txtdeskd = document.getElementById("DeskD");
 
 		btnPesan.onclick = function(){
-			alert("Laporan Berhasil dikirim");
-			txtnamap.value = "";
-			txtemailp.value = "";
-			txtdeskp.value = "";
+			if (check(txtnamap,txtemailp,txtdeskp)) {
+				// alert("Laporan Berhasil dikirim");
+				TampilNotif(txtnamap,txtemailp,txtdeskp,"Laporan");
+				txtnamap.value = "";
+				txtemailp.value = "";
+				txtdeskp.value = "";
+				
+			}
+			
 		}
 
 		btnKarya.onclick = function(){
-			alert("Karya Berhasil disubmit");
-			txtnamak.value = "";
-			txtemailk.value = "";
-			txtdeskk.value = "";
+			if (check(txtnamak,txtemailk,txtdeskk)) {
+				// alert("Karya Berhasil disubmit");
+				TampilNotif(txtnamak,txtemailk,txtdeskk,"Permintaan");
+				txtnamak.value = "";
+				txtemailk.value = "";
+				txtdeskk.value = "";
+			}	
 		}
 
 		btnDesk.onclick = function(){
-			alert("Pesan Berhasil dikirim");
-			txtnamad.value = "";
-			txtemaild.value = "";
-			txtdeskd.value = "";
+			if (check(txtnamad,txtemaild,txtdeskd)){
+				// alert("Pesan Berhasil dikirim");
+				TampilNotif(txtnamad,txtemaild,txtdeskd,"Feedback");
+				txtnamad.value = "";
+				txtemaild.value = "";
+				txtdeskd.value = "";
+			}
 		}
+
+		function check(txt1,txt2,txt3) {
+			if(txt1.value != ""&&txt2.value != ""&&txt3.value != ""){
+				return true;
+			}else{
+				// alert("Data Belum Komplit");
+				return false;
+			}	
+		}
+
+		var notif = document.getElementById("notif");
+		var wadah = document.getElementById("wadah");
+		var isinotif = document.getElementById("caption");
+		var desk = document.getElementById("desk");
+
+		function TampilNotif(txtnama,txtemail,txtdesk,tipe) {
+			notif.style.display = "block";
+			isinotif.innerHTML = "Terima Kasih "+txtnama.value+" Atas "+tipe+"nya<br><br>" +
+			"Email : "+txtemail.value+
+			"<br><br> "; 
+			
+			desk.innerHTML = "Deskripsi "+tipe+" : <br>"+ txtdesk.value;
+			var text = txtdesk.value;
+
+			if(text.length > 165){
+				wadah.style.overflowY = "Scroll";
+			}else{
+				wadah.style.overflowY = "none";
+			}
+		}
+
+		var span = document.getElementById("close");
+		var span2 = document.getElementById("close2");
+		span.onclick = function(){
+			notif.style.display = 'none';
+		}
+
+		span2.onclick = function(){
+			notif.style.display = 'none';
+		}
+
 	 </script>
 </body>
 </html>

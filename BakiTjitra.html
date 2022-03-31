@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Baki Tjitra (Galeri)</title>
-</head>
 	<link rel="stylesheet" type="text/css" href="baki.css">
 	<link rel="stylesheet" type="text/css" href="menubar.css">
 	<link rel="icon" href="images/icon.png" type="image/png">
+<head>
+	<title>Baki Tjitra (Galeri)</title>
+</head>
+
 <body class="body2" onload="document.body.style.opacity='1'">
 
 	<div id="maskparent">
@@ -23,7 +24,9 @@
 		<p class="top">Judul : Warisan Budaya Bangsa Indonesia</p>
 		<p>2008</p>
 		<p>Tato Kastareja</p>
+		<a href=KirimPesan.html><button class="reportcs" id="rep.img1">Report</button></a> 
 		
+
 	</div>
 
 	<div class="image2">
@@ -31,7 +34,9 @@
 		<p class="top">Judul : Mendengar Langkah Hati</p>
 		<p>2007</p>
 		<p>Teguh Osterik</p>
+		<a href=KirimPesan.html><button class="reportcs" id="rep.img2">Report</button></a> 
 		
+
 	</div>
 
 	<div class="image3">
@@ -39,7 +44,9 @@
 		<p class="top">Judul : Semak itu Indah</p>
 		<p>2008</p>
 		<p>Taat Joeda</p>
+		<a href=KirimPesan.html><button class="reportcs" id="rep.img3">Report</button></a> 
 		
+
 	</div>
 
 	<div class="image4">
@@ -47,7 +54,8 @@
 		<p class="top">Judul : Black Sun</p>
 		<p>2008</p>
 		<p>T. Sutanto</p>
-		
+		<a href=KirimPesan.html><button class="reportcs" id="rep.img4">Report</button></a>
+
 	</div>
 
 	<div class="image5">
@@ -55,7 +63,9 @@
 		<p class="top">Judul : Demokrasi</p>
 		<p>2000</p>
 		<p>Syahruddin Harahap</p>
+		<a href=KirimPesan.html><button class="reportcs" id="rep.img5">Report</button></a> 
 		
+
 	</div>
 
 	<div class="image6">
@@ -63,7 +73,10 @@
 		<p class="top">Judul : Menuju Kesederhanaan</p>
 		<p>2008</p>
 		<p>Syahrizal Pahlevi</p>
+		<a href=KirimPesan.html><button class="reportcs" id="rep.img6">Report</button></a> 
 		
+
+
 	</div>
 
 	<div id="myModal" class="modal">
@@ -84,11 +97,8 @@
 var img1 = document.getElementById("image1");
 img1.alt = "Detail : <br>TATO KASTAREJA. Lahir di Cilacap, 26 Juni 1967. <br>Pendidikan: 1985  SMSR Yogyakarta jurusan seni lukis. <br><br>Pameran Tunggal: 2006  pameran tunggal di Darmint Cafe Art Gallery, Jakarta. <br><br>Pameran Bersama: Pameran Nusantara, Galeri Nasional Jakarta. <br><br>Penghargaan: <br> a. 2005 Karya berjudul 'Batu-batu Keterbatasan' menang 5 besar untuk karya terbaik pada kompetisi Golden Palette <br>b. 2005 Karya berjudul 'Menembus Kebebasan' masuk nominasi pada kompetisi Golden Palette. <br><br>Pasar Seni Blok C-20, Taman Impian Jaya Ancol, Jakarta";
 
-
 var img2 = document.getElementById("image2");
 img2.alt = "Detail : <br>TEGUH OSTENRIK. Lahir di Jakarta, 1950. <br>Pendidikan: <br>a. 1972 Akademi Grafis Lette Schüle <br>b. Berlin Barat, Jerman 1974  Jurusan Seni Rupa Murni <br>c. Hochschule der Kunste Berlin Barat <br><br>Pameran Tunggal: <br>a. 2003 'Praise' Patung dan panel terakota, Hotel Intercontinental, Manila-Philippines.  <br>b. 2005 'Compassion' Church of St. Mary of the Angels, Singapura; Look At Me, lukisan dan patung, Galeri Nadi, Jakarta <br>c.  2007 'Kamasutra Femmes' lukisan dan patung, East & West Art Gallery, Melbourne-Australia. <br><br>Pameran Bersama: <br>a. 2004 'A Brush with Lions', Sing Art, Singapura <br>b. 2006 'East West Art Collection I', Art Singapore 2006, Singapura; 'East West Art Collection II', Shanghai Art Fair 2006, Shanghai, China <br>c. 2007 Malihom AIR Program, Galeri ABN AMRO, Penang-Malaysia. <br><br>Jl. Tridharma Utama III No. 5, RT 009/RW 012/ Cilandak Barat, Jakarta 12430";
-
-
 
 var img3 = document.getElementById("image3");
 img3.alt = "Detail : <br>TAAT JOEDA. Lahir di Cirebon, 14 Juli 1948. <br>Pendidikan: Fakultas Seni Rupa ITB. <br><br>Pameran Tunggal: <br>a. 2000 Benteng Vredeburg, Yogyakarta <br>b. 2001 Lion, West Georgia, Vancouver, Canada; Hongkong Gallery <br>c. 2002 Mercantille Executive Club, BCA Building, Jakarta <br>d. 2003 Cermin Inspirasi, Hotel Marriot, Jakarta; Beyond Wealth, ABN AMRO Private Banking, Jakarta <br>e. 2004 Hotel Mulia, Jakarta <br>f. 2006 Lagoon Tower Hilton Hotel, Jakarta <br>g. 2007 Kuala Lumpur, Malaysia <br>h. 2008 Grand Melia, Jakarta. <br><br>Jl. Sukahaji Permai 2 No. 3, Gegerkalong, Bandung 40152";
@@ -146,7 +156,6 @@ const datadetail = [data1,data2,data3,data4,data5,data6];
 // alert(datadetail[0]);
 var image1 = document.getElementById("image1");
 image1.onclick = function(){
-	
 	modal.style.display = "block";
   	// this.style.top = 20%;
 	modalImg.src = this.src;
@@ -157,7 +166,6 @@ image1.onclick = function(){
 
 var image2 = document.getElementById("image2");
 image2.onclick = function(){
-	
 	modal.style.display = "block";
   	// this.style.top = 20%;
 	modalImg.src = this.src;
@@ -168,7 +176,6 @@ image2.onclick = function(){
 
 var image3 = document.getElementById("image3");
 image3.onclick = function(){
-	
 	modal.style.display = "block";
   	// this.style.top = 20%;
 	modalImg.src = this.src;
@@ -179,7 +186,6 @@ image3.onclick = function(){
 
 var image4 = document.getElementById("image4");
 image4.onclick = function(){
-	
 	modal.style.display = "block";
   	// this.style.top = 20%;
 	modalImg.src = this.src;
@@ -190,7 +196,6 @@ image4.onclick = function(){
 
 var image5 = document.getElementById("image5");
 image5.onclick = function(){
-	
 	modal.style.display = "block";
   	// this.style.top = 20%;
 	modalImg.src = this.src;
@@ -201,7 +206,6 @@ image5.onclick = function(){
 
 var image6 = document.getElementById("image6");
 image6.onclick = function(){
-	
 	modal.style.display = "block";
   	// this.style.top = 20%;
 	modalImg.src = this.src;

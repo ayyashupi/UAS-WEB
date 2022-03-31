@@ -9,8 +9,6 @@
     /*font-size: thin;*/
 }
 
-
-
 .hrf {
     font-family: "freehand";
 }
@@ -21,6 +19,7 @@
 	left: 76%;
     font-size: 700%;
 }
+
 .body3{
 	opacity: 0;
     transition: opacity 2s;
@@ -70,6 +69,7 @@
     left: -200vw;
     top: 10%;
 }
+
 .tab-panel {
     display: none;
 }
@@ -82,7 +82,7 @@
 .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
     display: block;
 }
-  
+
   /*
    isinyaaaa
   */
@@ -100,7 +100,7 @@ body {
     border-bottom: 0;
     cursor: pointer;
     font-size: 150%;
-    z-index: 99;
+    /*z-index: 99;*/
 }
     
 .tab-content {
@@ -145,7 +145,6 @@ body {
     border-top: 1px solid #ccc;
     font-size: 150%;
 }
-  
   
   /* body buat ngatur posisi tabnya
   */
@@ -196,7 +195,6 @@ body {
     top: 5%;
 }
 
-
 .button{
     display: block;
     position: absolute;
@@ -212,6 +210,7 @@ body {
     overflow: hidden;*/
     border: none;
     font-size: 220%;
+    /*z-index: 1000;*/
 }
 
 input{
@@ -241,4 +240,87 @@ textarea{
     font-family: "freehand";
     margin-bottom: -2%;
     /*font-style: thin;*/
+}
+
+.notif{
+    /*overflow: scroll;*/
+    display: none; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
+}
+
+.wadahnotif{
+    /*overflow-y: scroll;*/
+    background-color: #1A1919;
+    width: 40%;
+    height :30%;
+    max-height: 30%;
+    top: 30%;
+    left: 30%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.caption{
+    font-size: 220%;
+    /*position: relative;*/
+    max-width: 93%;
+    position: absolute;
+    left: 4%;
+    /*top: 31%;*/
+    /*line-height: 1;*/
+}
+.desk{
+    top: 28%;
+    font-size: 180%;
+    text-align: justify;
+    /*position: relative;*/
+    max-width: 93%;
+    position: absolute;
+    left: 4%;
+
+    line-height: 1.5;
+}
+
+
+.wadahnotif, .caption ,.deskripsigambar{  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
 }

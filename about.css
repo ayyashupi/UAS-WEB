@@ -22,19 +22,18 @@ div{
     position: absolute;
 	top: 20%;
 	left: 8%;
-
 }
 .pprofil2 {
     position: absolute;
 	top: 20%;
 	left: 38%;
-
 }
 .pprofil3 {
     position: absolute;
 	top: 20%;
 	left: 68%;
 }
+
 /* isi container */
 .container{
 	display: block;

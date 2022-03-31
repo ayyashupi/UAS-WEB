@@ -1,14 +1,11 @@
 @font-face {
     font-family: vogue;
     src: url(fonts/CupheadVogue-Bold.otf);
-
 }
-
 @font-face {
     font-family: canyon;
     src: url(fonts/canyon.OTF);
 }
-
 @font-face {
     font-family: Freehand;
     src: url(fonts/freehand.TTF);
@@ -26,14 +23,6 @@ body {
     background-image: url("images/background.png");
     background-size: cover;
 }
-
-a:link {
-    text-decoration: none;
-  }
-a:visited {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
 
 .about{
     text-decoration: none;
@@ -91,8 +80,6 @@ a:visited {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
-
-
 
 .baki{
     text-decoration: none;

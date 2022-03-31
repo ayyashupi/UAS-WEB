@@ -14,12 +14,12 @@ p{
     text-align: center;
 }
 
-.welcome{
+/* .welcome{
     left: 15%;
-    /*margin-top: -10%;*/
+    margin-top: -10%;
     pointer-events: none;
     position: absolute;
 	display: block;	
 	margin: auto;
 	margin-top: -3%;	
-}
+}   */
