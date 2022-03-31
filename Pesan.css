@@ -9,8 +9,6 @@
     /*font-size: thin;*/
 }
 
-
-
 .hrf {
     font-family: "freehand";
 }
@@ -21,6 +19,7 @@
 	left: 76%;
     font-size: 700%;
 }
+
 .body3{
 	opacity: 0;
     transition: opacity 2s;
@@ -70,6 +69,7 @@
     left: -200vw;
     top: 10%;
 }
+
 .tab-panel {
     display: none;
 }
@@ -82,7 +82,7 @@
 .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
     display: block;
 }
-  
+
   /*
    isinyaaaa
   */
@@ -146,7 +146,6 @@ body {
     font-size: 150%;
 }
   
-  
   /* body buat ngatur posisi tabnya
   */
   /*body {
@@ -195,7 +194,6 @@ body {
 .soerat{
     top: 5%;
 }
-
 
 .button{
     display: block;

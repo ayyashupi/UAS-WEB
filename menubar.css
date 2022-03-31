@@ -1,7 +1,6 @@
 @font-face {
     font-family: vogue;
     src: url(fonts/CupheadVogue-Bold.otf);
-
 }
 
 @font-face {
@@ -91,8 +90,6 @@ a:visited {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
-
-
 
 .baki{
     text-decoration: none;
