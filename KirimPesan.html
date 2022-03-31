@@ -69,7 +69,7 @@
 			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailD"></p>
 			<!-- <p class="head">Deskripsi Laporan</p> -->
 			<p><textarea placeholder="Pesan" rows="7" cols="40" name="teks.l" id="DeskD"></textarea></p>
-			<button class="button" id="btnDesk">Submit</button>
+			<button class="button" id="btnDesk" onclick="TampilNotif()">Submit</button>
 			</section>
 		</div>
 	  </div>
@@ -78,6 +78,21 @@
 		<!-- <h2><strong>Loekis</h2> -->
 
 	<div class="tab-container"></div>
+
+	<div class="notif" id="notif">
+		<!-- <span class="close" id="close">&times;</span> -->
+		<span class="close" id="close2">&times;</span>
+		<div class="wadahnotif" id="wadah">
+			<span class="close" id="close">&times;</span>
+			<p class="caption" id="caption">
+  			Terima Kasih Telah Mengirimkan Laporan</p>
+  			<p class="desk" id="desk">
+  				
+  			</p>
+		</div>
+  		
+
+	</div>
 	  
 	<script type="text/javascript">
 		// alert("Test 1");
@@ -98,16 +113,20 @@
 
 		btnPesan.onclick = function(){
 			if (check(txtnamap,txtemailp,txtdeskp)) {
-				alert("Laporan Berhasil dikirim");
+				// alert("Laporan Berhasil dikirim");
+				TampilNotif(txtnamap,txtemailp,txtdeskp,"Laporan");
 				txtnamap.value = "";
 				txtemailp.value = "";
 				txtdeskp.value = "";
+				
 			}
+			
 		}
 
 		btnKarya.onclick = function(){
 			if (check(txtnamak,txtemailk,txtdeskk)) {
-				alert("Karya Berhasil disubmit");
+				// alert("Karya Berhasil disubmit");
+				TampilNotif(txtnamak,txtemailk,txtdeskk,"Permintaan");
 				txtnamak.value = "";
 				txtemailk.value = "";
 				txtdeskk.value = "";
@@ -116,7 +135,8 @@
 
 		btnDesk.onclick = function(){
 			if (check(txtnamad,txtemaild,txtdeskd)){
-				alert("Pesan Berhasil dikirim");
+				// alert("Pesan Berhasil dikirim");
+				TampilNotif(txtnamad,txtemaild,txtdeskd,"Feedback");
 				txtnamad.value = "";
 				txtemaild.value = "";
 				txtdeskd.value = "";
@@ -127,9 +147,37 @@
 			if(txt1.value != ""&&txt2.value != ""&&txt3.value != ""){
 				return true;
 			}else{
-				alert("Data Belum Komplit");
+				// alert("Data Belum Komplit");
 				return false;
 			}	
+		}
+
+		var notif = document.getElementById("notif");
+		var wadah = document.getElementById("wadah");
+		var isinotif = document.getElementById("caption");
+		var desk = document.getElementById("desk");
+
+		function TampilNotif(txtnama,txtemail,txtdesk,tipe) {
+			notif.style.display = "block";
+			isinotif.innerHTML = "Terima Kasih "+txtnama.value+" Atas "+tipe+"nya<br><br>" +
+			"Email : "+txtemail.value+
+			"<br><br> "; 
+			
+			desk.innerHTML = "Deskripsi "+tipe+" : <br>"+ txtdesk.value;
+
+			if(txtdesk.value.length >250){
+				wadah.style.overflowY = "Scroll";
+			}
+		}
+
+		var span = document.getElementById("close");
+		var span2 = document.getElementById("close2");
+		span.onclick = function(){
+			notif.style.display = 'none';
+		}
+
+		span2.onclick = function(){
+			notif.style.display = 'none';
 		}
 
 	 </script>
