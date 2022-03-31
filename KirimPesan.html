@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="menubar.css">
-	<link rel="stylesheet" type="text/css" href="Pesan.css">
-	<link rel="icon" href="images/icon.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="menubar.css">
+<link rel="stylesheet" type="text/css" href="Pesan.css">
+<link rel="icon" href="images/icon.png" type="image/png">
 <head>
 	<title>Kotak Soerat (Kirim Pesan)</title>
 </head>
@@ -10,97 +10,97 @@
 <body class="body3" onload="document.body.style.opacity='1'">
 	<svg width="100%" height="100%" style="position: absolute; left:0;top: 0;">
 		<foreignObject width="100%" height="100%" filter="">
-	
-	<a href="home.html"><img class="logogmbr" src="images/logo.png"></a>
+			
+			<a href="home.html"><img class="logogmbr" src="images/logo.png"></a>
 
-	<a id="soerat" class="soerat" href="KirimPesan.html">Kotak Soerat</a>
+			<a id="soerat" class="soerat" href="KirimPesan.html">Kotak Soerat</a>
 
 
-    <a class="about" href="about.html">About Us</a>
+			<a class="about" href="about.html">About Us</a>
 
-    <a id="baki" class="baki" href="BakiTjitra.html">Baki Tjitra</a>
+			<a id="baki" class="baki" href="BakiTjitra.html">Baki Tjitra</a>
 
-   
-	<div class="garis"></div>
-	<div class="kop">
-		<img src="images/stamp.PNG" class="kop1">
-	</div>
+			
+			<div class="garis"></div>
+			<div class="kop">
+				<img src="images/stamp.PNG" class="kop1">
+			</div>
 
-	<div class="tabset">
-		<!-- Tab 1 -->
-		<input type="radio" name="tabset" id="tab1" aria-controls="Lapor" checked>
-		<label for="tab1" class="head">Lapor</label>
-		<!-- Tab 2 -->
-		<input type="radio" name="tabset" id="tab2" aria-controls="Permintaan">
-		<label for="tab2" class="head">Permintaan Upload Karya</label>
-		<!-- Tab 3 -->
-		<input type="radio" name="tabset" id="tab3" aria-controls="PesanKesan">
-		<label for="tab3" class="head">Pesan</label>
+			<div class="tabset">
+				<!-- Tab 1 -->
+				<input type="radio" name="tabset" id="tab1" aria-controls="Lapor" checked>
+				<label for="tab1" class="head">Lapor</label>
+				<!-- Tab 2 -->
+				<input type="radio" name="tabset" id="tab2" aria-controls="Permintaan">
+				<label for="tab2" class="head">Permintaan Upload Karya</label>
+				<!-- Tab 3 -->
+				<input type="radio" name="tabset" id="tab3" aria-controls="PesanKesan">
+				<label for="tab3" class="head">Pesan</label>
+				
+				<div class="tab-panels">
+					<section id="Lapor" class="tab-panel">
+						<p class="head" style="font-size: 160%; margin-bottom: 0%;">Laporan masalah</p>
+						<p>Laporkan masalah jika ada masalah pada website dipersilahkan untuk melaporkan ke kami dengan senang hati kami menerima laporan sebagai pengembangan website kami. Dalam bentuk kami bisa berterima kasih kami membutuhkan identitas pelapor sehingga kami bisa memberikan feedback atas laporan yang telah sudah kami dapatkan.</p>
+						<!-- <p class="head">Nama</p> -->
+						<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaP"></p>
+						<!-- <p class="head">Surel</p> -->
+						<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailP"></p>
+						<!-- <p class="head">Deskripsi Laporan</p> -->
+						<p><textarea placeholder="Deskripsi Laporan" rows="7" cols="40" name="teks.l" id="DeskP"></textarea></p>
+						<button class="button" id="btnPesan">Submit</button>
+					</section>
+
+					<section id="Permintaan" class="tab-panel">
+						<p class="head" style="font-size: 160%; margin-bottom: 0%;">Permintaan Mengunggah Karya</p>
+						<p>Kami membuka peluang untuk masyarakat umum yang ingin mempublikasikan karyanya. pada form ini dipersilahkan untuk mengirim soerat terbuka kepada kami agar kami bisa menampilkan karya mu.</p>
+						<!-- <p class="head">Nama</p> -->
+						<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaK"></p>
+						<!-- <p class="head">Surel</p> -->
+						<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailK"></p>
+						<!-- <p class="head">Deskripsi Laporan</p> -->
+						<p><textarea placeholder="Deskripsi Permintaan" rows="7" cols="40" name="teks.l" id="DeskK"></textarea></p>
+						<button class="button" id="btnKarya">Submit</button>
+					</section>
+
+					<section id="PesanKesan" class="tab-panel">
+						<p class="head" style="font-size: 160%; margin-bottom: 0%;">Pesan Kesan</p>
+						<p>Salah satu kemampuan manusia yang sangat menakjubkan adalah kemampuan untuk mengkomunikasikan perasaanya kepada manusia lainya. Tab ini membantu kamu untuk mengkomunikasikan apa yang ada di hati mu kepada kami.</p>
+						<!-- <p class="head">Nama</p> -->
+						<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaD"></p>
+						<!-- <p class="head">Surel</p> -->
+						<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailD"></p>
+						<!-- <p class="head">Deskripsi Laporan</p> -->
+						<p><textarea placeholder="Pesan" rows="7" cols="40" name="teks.l" id="DeskD"></textarea></p>
+						<button class="button" id="btnDesk" onclick="TampilNotif()">Submit</button>
+					</section>
+				</div>
+			</div>
+
+			<div class="lukis"></div>
+			<!-- <h2><strong>Loekis</h2> -->
+
+				<div class="tab-container"></div>
+
+				<div class="notif" id="notif">
+					<!-- <span class="close" id="close">&times;</span> -->
+					<span class="close" id="close2">&times;</span>
+					<div class="wadahnotif" id="wadah">
+						<span class="close" id="close">&times;</span>
+						<p class="caption" id="caption">
+						Terima Kasih Telah Mengirimkan Laporan</p>
+						<p class="desk" id="desk">
+							
+						</p>
+					</div>
+					
+
+				</div>
+				<button class="light" id="light">Switch Mode</button>
+				<!-- <img src="http://lorempixel.com/450/300/sports" width="100%" height="100%" /> -->
+			</foreignObject>
+		</svg>
 		
-		<div class="tab-panels">
-			<section id="Lapor" class="tab-panel">
-			<p class="head" style="font-size: 160%; margin-bottom: 0%;">Laporan masalah</p>
-			<p>Laporkan masalah jika ada masalah pada website dipersilahkan untuk melaporkan ke kami dengan senang hati kami menerima laporan sebagai pengembangan website kami. Dalam bentuk kami bisa berterima kasih kami membutuhkan identitas pelapor sehingga kami bisa memberikan feedback atas laporan yang telah sudah kami dapatkan.</p>
-			<!-- <p class="head">Nama</p> -->
-			<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaP"></p>
-			<!-- <p class="head">Surel</p> -->
-			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailP"></p>
-			<!-- <p class="head">Deskripsi Laporan</p> -->
-			<p><textarea placeholder="Deskripsi Laporan" rows="7" cols="40" name="teks.l" id="DeskP"></textarea></p>
-			<button class="button" id="btnPesan">Submit</button>
-			</section>
-
-			<section id="Permintaan" class="tab-panel">
-			<p class="head" style="font-size: 160%; margin-bottom: 0%;">Permintaan Mengunggah Karya</p>
-			<p>Kami membuka peluang untuk masyarakat umum yang ingin mempublikasikan karyanya. pada form ini dipersilahkan untuk mengirim soerat terbuka kepada kami agar kami bisa menampilkan karya mu.</p>
-			<!-- <p class="head">Nama</p> -->
-			<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaK"></p>
-			<!-- <p class="head">Surel</p> -->
-			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailK"></p>
-			<!-- <p class="head">Deskripsi Laporan</p> -->
-			<p><textarea placeholder="Deskripsi Permintaan" rows="7" cols="40" name="teks.l" id="DeskK"></textarea></p>
-			<button class="button" id="btnKarya">Submit</button>
-			</section>
-
-			<section id="PesanKesan" class="tab-panel">
-			<p class="head" style="font-size: 160%; margin-bottom: 0%;">Pesan Kesan</p>
-			<p>Salah satu kemampuan manusia yang sangat menakjubkan adalah kemampuan untuk mengkomunikasikan perasaanya kepada manusia lainya. Tab ini membantu kamu untuk mengkomunikasikan apa yang ada di hati mu kepada kami.</p>
-			<!-- <p class="head">Nama</p> -->
-			<p><input placeholder="Nama" type="text" name="Nama.P" size="40" id="NamaD"></p>
-			<!-- <p class="head">Surel</p> -->
-			<p><input placeholder="Surel" type="text" name="email" size="40" id="EmailD"></p>
-			<!-- <p class="head">Deskripsi Laporan</p> -->
-			<p><textarea placeholder="Pesan" rows="7" cols="40" name="teks.l" id="DeskD"></textarea></p>
-			<button class="button" id="btnDesk" onclick="TampilNotif()">Submit</button>
-			</section>
-		</div>
-	  </div>
-
-	<div class="lukis"></div>
-		<!-- <h2><strong>Loekis</h2> -->
-
-	<div class="tab-container"></div>
-
-	<div class="notif" id="notif">
-		<!-- <span class="close" id="close">&times;</span> -->
-		<span class="close" id="close2">&times;</span>
-		<div class="wadahnotif" id="wadah">
-			<span class="close" id="close">&times;</span>
-			<p class="caption" id="caption">
-  			Terima Kasih Telah Mengirimkan Laporan</p>
-  			<p class="desk" id="desk">
-  				
-  			</p>
-		</div>
-  		
-
-	</div>
-	<button class="light" id="light">Switch Mode</button>
-			<!-- <img src="http://lorempixel.com/450/300/sports" width="100%" height="100%" /> -->
-		</foreignObject>
-	</svg>
-	  
-	<script type="text/javascript">
+		<script type="text/javascript">
 		// alert("Test 1");
 		var btnPesan = document.getElementById("btnPesan");
 		var txtnamap	= document.getElementById("NamaP");
@@ -188,9 +188,9 @@
 		span2.onclick = function(){
 			notif.style.display = 'none';
 		}
-var body = document.getElementsByTagName('foreignObject')[0];
-var button = document.getElementById("light");
-var light = false;
+		var body = document.getElementsByTagName('foreignObject')[0];
+		var button = document.getElementById("light");
+		var light = false;
 
 		button.onclick = function () {
 	// body...
@@ -213,7 +213,7 @@ var light = false;
 	}		
 }
 
-	 </script>
+</script>
 
 </body>
 </html>

@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" href="about.css">
-	<link rel="stylesheet" type="text/css" href="menubar.css">
-	<link rel="icon" href="images/icon.png" type="image/png">
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" type="text/css" href="menubar.css">
+<link rel="icon" href="images/icon.png" type="image/png">
 <head>
 	<title>About Us (Tentang Kami)</title>
 </head>
 <!-- body onload="AnimasiWelcome()"> -->
 <body class="body2" onload="document.body.style.opacity='1'">
-    <svg width="100%" height="100%" style="position: absolute; left:0;top: 0;">
-        <foreignObject width="100%" height="100%" filter="">
-    <div id="maskparent">
-		<a href="home.html"><img class="logogmbr" src="images/logo.png"></a>
-	</div>
+	<svg width="100%" height="100%" style="position: absolute; left:0;top: 0;">
+		<foreignObject width="100%" height="100%" filter="">
+			<div id="maskparent">
+				<a href="home.html"><img class="logogmbr" src="images/logo.png"></a>
+			</div>
 
-    <a class="about" href="about.html">About Us</a>
+			<a class="about" href="about.html">About Us</a>
 
-    <a id="baki" class="baki" href="BakiTjitra.html">Baki Tjitra</a>
+			<a id="baki" class="baki" href="BakiTjitra.html">Baki Tjitra</a>
 
-    <!-- <a href="home.html"><img class="logogmbr" src="images/logo.png"></a> -->
+			<!-- <a href="home.html"><img class="logogmbr" src="images/logo.png"></a> -->
 
-    <a class="soerat" href="KirimPesan.html">Kotak Soerat</a>
+			<a class="soerat" href="KirimPesan.html">Kotak Soerat</a>
 
-    <!-- div class="welcome" id="welcome"> -->
+			<!-- div class="welcome" id="welcome"> -->
 
-    <div class="pprofil">
-		<img src="images/Adnan.png" class="container" id="image1">
-		<p class="top">Adnan Arsy Akbar</p>
-		<p>2004060</p>
-		<p>RPL 4A</p>
-	</div>
+			<div class="pprofil">
+				<img src="images/Adnan.png" class="container" id="image1">
+				<p class="top">Adnan Arsy Akbar</p>
+				<p>2004060</p>
+				<p>RPL 4A</p>
+			</div>
 
-    <div class="pprofil2">
-		<img src="images/Ayyash.png" class="container" id="image2">
-		<p class="top">Muhammad Yahya Ayyash</p>
-		<p>2006434</p>
-		<p>RPL 4A</p>
-	</div>
+			<div class="pprofil2">
+				<img src="images/Ayyash.png" class="container" id="image2">
+				<p class="top">Muhammad Yahya Ayyash</p>
+				<p>2006434</p>
+				<p>RPL 4A</p>
+			</div>
 
-    <div class="pprofil3">
-		<img src="images/Zhofron.png" class="container" id="image3">
-		<p class="top">Zhofron Al Fajr Gunarko Putra</p>
-		<p>2003652</p>
-		<p>RPL 4A</p>
-	</div>
+			<div class="pprofil3">
+				<img src="images/Zhofron.png" class="container" id="image3">
+				<p class="top">Zhofron Al Fajr Gunarko Putra</p>
+				<p>2003652</p>
+				<p>RPL 4A</p>
+			</div>
 
-	<button class="light" id="light">Switch Mode</button>
-            <!-- <img src="http://lorempixel.com/450/300/sports" width="100%" height="100%" /> -->
-        </foreignObject>
-    </svg>
+			<button class="light" id="light">Switch Mode</button>
+			<!-- <img src="http://lorempixel.com/450/300/sports" width="100%" height="100%" /> -->
+		</foreignObject>
+	</svg>
 
 </body>
 
@@ -57,10 +57,10 @@
 	var image2 = document.getElementById("image2");
 	var image3 = document.getElementById("image3");
 	var body = document.getElementsByTagName('foreignObject')[0];
-        var button = document.getElementById("light");
-        var light = false;
+	var button = document.getElementById("light");
+	var light = false;
 
-        button.onclick = function () {
+	button.onclick = function () {
     // body...
     if(light){
         // body.setAttribute('filter', '');
@@ -72,13 +72,13 @@
         // rpt1.style.filter = "invert(0%)"
 
         image1.style.filter = "invert(0%)";
-		image2.style.filter = "invert(0%)";
-		image3.style.filter = "invert(0%)";
+        image2.style.filter = "invert(0%)";
+        image3.style.filter = "invert(0%)";
     }else{
 
     	image1.style.filter = "invert(100%)";
-		image2.style.filter = "invert(100%)";
-		image3.style.filter = "invert(100%)";
+    	image2.style.filter = "invert(100%)";
+    	image3.style.filter = "invert(100%)";
                 // body.setAttribute('filter', 'url(#blur-and-invert)');
                 body.style.filter = "invert(100%)";
         // body.style.backgroundImage = "url('images/kopsurat.jpg')";
