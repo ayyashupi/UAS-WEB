@@ -2,6 +2,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="baki.css">
 <link rel="stylesheet" type="text/css" href="menubar.css">
+<script src="https://kit.fontawesome.com/6256c8ca87.js" crossorigin="anonymous"></script>
 <link rel="icon" href="images/icon.png" type="image/png">
 <head>
 	<title>Baki Tjitra (Galeri)</title>
@@ -25,10 +26,11 @@
 				<p class="top">Judul : Warisan Budaya Bangsa Indonesia</p>
 				<p>2008</p>
 				<p>Tato Kastareja</p>
-				<a href=KirimPesan.html><button class="reportcs" id="rep.img1">Report</button></a> 
-
-
-
+				<a href=KirimPesan.html>
+					<button><i class="fa-solid fa-flag"></i></button>
+				</a>
+				<button onclick="toggle()" id="like" class="btn"><i class="fa-solid fa-heart"></i></button> 
+				
 			</div>
 
 			<div class="image2">
@@ -36,23 +38,21 @@
 				<p class="top">Judul : Mendengar Langkah Hati</p>
 				<p>2007</p>
 				<p>Teguh Osterik</p>
-
-				<a href=KirimPesan.html><button class="reportcs" id="rep.img2">Report</button></a> 
-
-
-
+				<a href=KirimPesan.html>
+					<button><i class="fa-solid fa-flag"></i></button>
+				</a> 
+				<button onclick="toggle2()" id="like2" class="btn"><i class="fa-solid fa-heart"></i></button>
 			</div>
 
 			<div class="image3">
 				<img src="images/galeri3.jpg" class="container" id="image3">
 				<p class="top">Judul : Semak itu Indah</p>
 				<p>2008</p>
-
 				<p>Taat Joeda</p>
-				<a href=KirimPesan.html><button class="reportcs" id="rep.img3">Report</button></a> 
-
-
-
+				<a href=KirimPesan.html>
+					<button><i class="fa-solid fa-flag"></i></button>
+				</a> 
+				<button onclick="toggle3()" id="like3" class="btn"><i class="fa-solid fa-heart"></i></button>
 			</div>
 
 			<div class="image4">
@@ -60,8 +60,10 @@
 				<p class="top">Judul : Black Sun</p>
 				<p>2008</p>
 				<p>T. Sutanto</p>
-				<a href=KirimPesan.html><button class="reportcs" id="rep.img4">Report</button></a>
-
+				<a href=KirimPesan.html>
+					<button><i class="fa-solid fa-flag"></i></button>
+				</a> 
+				<button onclick="toggle4()" id="like4" class="btn"><i class="fa-solid fa-heart"></i></button>
 			</div>
 
 			<div class="image5">
@@ -69,9 +71,10 @@
 				<p class="top">Judul : Demokrasi</p>
 				<p>2000</p>
 				<p>Syahruddin Harahap</p>
-
-				<a href=KirimPesan.html><button class="reportcs" id="rep.img5">Report</button></a> 
-
+				<a href=KirimPesan.html>
+					<button><i class="fa-solid fa-flag"></i></button>
+				</a> 
+				<button onclick="toggle5()" id="like5" class="btn"><i class="fa-solid fa-heart"></i></button>
 			</div>
 
 			<div class="image6">
@@ -79,11 +82,10 @@
 				<p class="top">Judul : Menuju Kesederhanaan</p>
 				<p>2008</p>
 				<p>Syahrizal Pahlevi</p>
-				<a href=KirimPesan.html><button class="reportcs" id="rep.img6">Report</button></a> 
-
-
-
-
+				<a href=KirimPesan.html>
+					<button><i class="fa-solid fa-flag"></i></button>
+				</a> 
+				<button onclick="toggle6()" id="like6" class="btn"><i class="fa-solid fa-heart"></i></button>
 			</div>
 
 			<div id="myModal" class="modal">
@@ -104,6 +106,55 @@
 </body>
 
 <script type="text/javascript">
+	var liked = document.getElementById('like');
+	function toggle(){
+		if (liked.style.color == "tomato") {
+			liked.style.color = "aqua"
+		} else {
+			liked.style.color = "tomato"
+		}
+	} 
+	var liked2 = document.getElementById('like2');
+	function toggle2(){
+		if (liked2.style.color == "tomato") {
+			liked2.style.color = "aqua"
+		} else {
+			liked2.style.color = "tomato"
+		}
+	} 
+	var liked3 = document.getElementById('like3');
+	function toggle3(){
+		if (liked3.style.color == "tomato") {
+			liked3.style.color = "aqua"
+		} else {
+			liked3.style.color = "tomato"
+		}
+	} 
+	var liked4 = document.getElementById('like4');
+	function toggle4(){
+		if (liked4.style.color == "tomato") {
+			liked4.style.color = "aqua"
+		} else {
+			liked4.style.color = "tomato"
+		}
+	} 
+	var liked5 = document.getElementById('like5');
+	function toggle5(){
+		if (liked5.style.color == "tomato") {
+			liked5.style.color = "aqua"
+		} else {
+			liked5.style.color = "tomato"
+		}
+	} 
+	var liked6 = document.getElementById('like6');
+	function toggle6(){
+		if (liked6.style.color == "tomato") {
+			liked6.style.color = "aqua"
+		} else {
+			liked6.style.color = "tomato"
+		}
+	} 
+	
 	// alert("Test");
 	var img1 = document.getElementById("image1");
 	img1.alt = "Detail : <br>TATO KASTAREJA. Lahir di Cilacap, 26 Juni 1967. <br>Pendidikan: 1985  SMSR Yogyakarta jurusan seni lukis. <br><br>Pameran Tunggal: 2006  pameran tunggal di Darmint Cafe Art Gallery, Jakarta. <br><br>Pameran Bersama: Pameran Nusantara, Galeri Nasional Jakarta. <br><br>Penghargaan: <br> a. 2005 Karya berjudul 'Batu-batu Keterbatasan' menang 5 besar untuk karya terbaik pada kompetisi Golden Palette <br>b. 2005 Karya berjudul 'Menembus Kebebasan' masuk nominasi pada kompetisi Golden Palette. <br><br>Pasar Seni Blok C-20, Taman Impian Jaya Ancol, Jakarta";
