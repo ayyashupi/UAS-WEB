@@ -33,9 +33,9 @@ crossorigin="anonymous">
          </div>
          <ul class="list-unstyled px-2">
             <li class=""><a href="index_loekisan.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-database"></i> Indeks Lukisan</a></li>
-            <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
-            <span><i class="fa-solid fa-database"></i> Indeks Laporan</span>n
-               <!-- <span class="bg-dark rounded-pill text-white py-0 px-2">01</span> -->
+            <li class=""><a href="index_laporan.php" class="text-decoration-none px-3 py-2 d-block">
+            <span><i class="fa-solid fa-database"></i> Indeks Laporan</span>
+               <span class="bg-dark rounded-pill text-white py-0 px-2">01</span>
             </a>
             </li>
          </ul>
