@@ -152,6 +152,39 @@ end %%
 delimiter ;
 
 delimiter %%
+create or replace procedure DeleteLaporan(
+in id_i int
+)
+begin
+
+delete from laporan where id = id_i;
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace procedure DeleteFeedback(
+in id_i int
+)
+begin
+
+delete from feedback where id = id_i;
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace procedure DeleteKarya(
+in id_i int
+)
+begin
+
+delete from permintaan_karya where id = id_i;
+
+end %%
+delimiter ;
+
+delimiter %%
 create or replace procedure InsertUser(
 in email_i varchar(255),
 in name_i varchar(255),
