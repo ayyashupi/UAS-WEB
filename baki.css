@@ -1,0 +1,236 @@
+div{
+	width: 25%;
+	height: 34%;
+	/*background-color: #1A1919;*/
+	background-image: url("images/background.png");
+	border-radius: 4%;
+	box-shadow: 10px 10px rgb(0 0 0 /0.8);
+}
+
+.modal-container{
+	width: 80%;
+	height: 80%;
+	background-color: #1A1919;
+	border-radius: 3%;
+	margin: auto;
+	/*box-shadow: 10px 10px rgb(0 0 0 /0.8);*/
+}
+
+button{
+	background-color: transparent;
+	border: none;
+}
+
+.btn{
+	color: aqua;
+}
+
+.fa-solid {
+	cursor: pointer;
+}
+
+.fa-flag{
+	position: absolute;
+	top: 82%;
+	left: 84%;
+	font-size: 24px;
+	color:aqua;
+} .fa-flag:hover{
+	color: tomato;
+    text-shadow:0px 0px 15px rgb(255, 99, 71);
+    transition: 0.2s ease-in;
+}
+
+.fa-heart {
+	position: absolute;
+	top: 82%;
+	left: 74%;
+	font-size: 24px;
+	
+	
+} 
+
+.modal-content {
+	position: relative;
+	top: 3%;
+	left: 2%;
+	display: block;
+	width: 80%;
+	max-width: 47%;
+	max-height: 93%;
+	object-fit: scale-down;
+}
+
+.deskripsigambar{
+	margin-left: 0%;
+	margin-top: 0%;
+	position: absolute;
+	top: 12%;
+	left: 50%;
+	display: block;
+	width: 80%;
+	max-width: 38%;
+	text-align: justify;
+	color: #ccc;
+	padding: 3%;
+}
+
+.caption { 
+	margin-left: 0%;
+	margin-top: 0%;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	display: block;
+	width: 80%;
+	max-width: 38%;
+	text-align: justify;
+	color: #ccc;
+	padding: 3% ;
+
+}
+
+.container{
+	display: block;
+	margin: auto;
+	margin-left: 10%;
+	margin-top: 4%;
+	width:  80%;
+	height: 60%;
+	border-radius: 2%;
+	object-fit: cover;
+	align-content:  center;
+	object-position: center;
+	box-shadow: 10px 10px rgb(0 0 0 /0.1);
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.container:hover {opacity: 0.7;}
+
+.image1{
+	position: absolute;
+	top: 15%;
+	left: 10%;
+}
+
+
+.image2{
+	position: absolute;
+	top: 15%;
+	left: 38%;
+}
+
+.image3{
+	position: absolute;
+	top: 15%;
+	left: 66%;
+}
+
+.image4{
+	position: absolute;
+	top: 55%;
+	left: 10%;
+}
+
+.image5{
+	position: absolute;
+	top: 55%;
+	left: 38%;
+}
+
+.image6{
+	position: absolute;
+	top: 55%;
+	left: 66%;
+}
+
+.reportcs {
+	margin-top: -10%;
+	margin-left: 80%;
+	display: block;
+	cursor: pointer;
+	font-family: "vogue";
+	background-color: transparent;
+	color: #F75052;
+	border: none;
+	font-size: 0.8vw;
+} 
+.reportcs:hover {
+	filter: drop-shadow(0 0 0.75rem rgb(255, 0, 0));
+
+}
+
+a:link {text-decoration: none}
+
+
+.top{
+	margin-top: 2%;
+}
+p{	
+	margin-left: 10%;
+	margin-top: -3%;
+	font-size: 1vw;
+	font-family: "vogue";
+	color: white;
+}
+
+/*MODAL Starts From here*/
+.modal{
+	/*background-image: ;*/
+	
+	display: none; 
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 5%; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
+}
+
+.modal-content, .caption ,.deskripsigambar{  
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+	from {-webkit-transform:scale(0)} 
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+	from {transform:scale(0)} 
+	to {transform:scale(1)}
+}
+
+.close {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	color: #f1f1f1;
+	font-size: 3vw;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+/*@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+  }*/
+
+

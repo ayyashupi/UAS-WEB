@@ -1,0 +1,160 @@
+@font-face {
+    font-family: vogue;
+    src: url(fonts/CupheadVogue-Bold.otf);
+}
+@font-face {
+    font-family: canyon;
+    src: url(fonts/canyon.OTF);
+}
+@font-face {
+    font-family: Freehand;
+    src: url(fonts/freehand.TTF);
+}
+
+body {
+    opacity: 0;
+    transition: opacity 2s;
+    /*background-image: url("images/background3.png");*/
+    /*background-color: #1A1919;*/
+    background-size: cover;
+    /*position: absolute;*/
+    /*filter: invert(100%);*/
+}
+
+.body2 {
+    /*filter: invert(100%);*/
+    opacity: 0;
+    transition: opacity 2s;
+    /*background-image: url("images/background.png");*/
+    background-color: #000000;
+    background-size: cover;
+}
+
+.about{
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    color: white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    bottom: 2%;
+    left: 2%;
+    font-family: "canyon";
+    color: white;
+    font-size: 3vw;
+    /*font-size: 350%;*/
+} 
+.about:hover {
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.logogmbr {
+    box-shadow: none;
+    width: 8%;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+} 
+.logogmbr:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(127, 255, 212));
+}
+
+.home{
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    color: white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    top: 2%;
+    left: 2%;
+    font-family: "canyon";
+    color: white;
+    font-size: 3vw;
+} 
+.home:hover {
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.baki{
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 45.5%;
+    text-align: center;
+    color: white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    font-family: "canyon";
+    color: white;
+    font-size: 3vw;
+} 
+.baki:hover{
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.soerat{
+   text-decoration: none;
+   display: block;
+   position: absolute;
+   color: white;
+   -moz-transition: all 0.2s ease-in;
+   -o-transition: all 0.2s ease-in;
+   -webkit-transition: all 0.2s ease-in;
+   transition: all 0.2s ease-in;
+   top: 2%;
+   right: 2%;
+   font-family: "canyon";
+   color: white;
+   font-size: 3vw;
+} 
+.soerat:hover{
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.light{
+    background: transparent;
+    border : none;
+    font-family: "canyon";
+    font-size: 3vw;
+    position: absolute;
+    right :2%;
+    bottom: 2%;
+    color: white;
+} 
+.light:hover{
+    color: aquamarine;
+    text-shadow:0px 0px 30px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}

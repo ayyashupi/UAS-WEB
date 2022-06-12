@@ -133,7 +133,7 @@ crossorigin="anonymous">
         echo "<p class='small text-muted-light mb-0'>".$datagambar[$i]["pelukis"]." - ".$datagambar[$i]["tahun"]."</p>";
         echo "<div class='d-flex align-items-center justify-content-between px-3 py-2 mt-4'>";
         echo "<p class='small mb-0'><button class='btn btn-link text-decoration-none text-white' id='btnlr'><i class='fa-solid fa-heart'></i></button></p>";
-        echo "<div class='badge badge-danger px-3 rounded-pill font-weight-normal'><button class='btn btn-link text-decoration-none text-white' id='btnlr'><i class='fa-solid fa-flag'></i></button></div>";
+        echo "<div class='badge badge-danger px-3 rounded-pill font-weight-normal'><a href='kirimpesan.php?id=".$datagambar[$i]["id"]."' class='btn btn-link text-decoration-none text-white' id='btnlr'><i class='fa-solid fa-flag'></i></button></div>";
         echo "</div>";
         echo "</div>";
         echo "</div>";
