@@ -7,6 +7,17 @@ session_start();
 if(!isset($_SESSION['user_name'])){
    header('location:login_form.php');
 }
+
+$datagambar = null;
+$select = " SELECT * FROM gambar";
+$result = mysqli_query($conn, $select);
+// $jumlah = 1;
+$jumlah = 0;
+while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+	$datagambar[$jumlah] = $row;
+	$jumlah++;
+}
+
 ?>
 
 
@@ -22,6 +33,7 @@ if(!isset($_SESSION['user_name'])){
 
 
 <link rel="stylesheet" href="css/galeri.css">
+<link rel="stylesheet" href="css/index_loekisan.css">
 <link rel="stylesheet" href="css/home.css">
 <!-- <link rel="stylesheet" href="css/menubar.css"> -->
 <link rel="stylesheet" href="css/fonts.css">
@@ -63,25 +75,30 @@ crossorigin="anonymous">
          		<tr>
          			<th scope="col">No.</th>
          			<th scope="col">ID Loekisan</th>
-         			<th scope="col">Nama Loekisan</th>
+         			<th scope="col">Judul Loekisan</th>
+         			<th scope="col">Tahun Loekisan</th>
          			<th scope="col">Pelukis</th>
          			<th scope="col">Loekisan</th>
          			<th scope="col">Action</th>
          		</tr>
          	</thead>
          	<tbody class="align-middle">
-         		<tr>
-         			<th scope="row">1</th>
-         			<td><input type="text" readonly class="form-control-plaintext text-white" id="staticEmail" value="LKS001"></td>
-         			<td>Melangkah</td>
-         			<td>Melangkah</td>
-         			<td>Melangkah</td>
-         			<td>
-
-         				<a href="form_loekisan.php" class="text-decoration-none py-2 link-primary"><i class="fa-solid fa-images"></i> Edit</a>
-         				<a href="hapus.php" class="text-decoration-none px-3 py-2 link-danger"><i class="fa-solid fa-images"></i> Delete</a>
-         			</td>
-         		</tr>
+         			<?php for ($i=0; $i < $jumlah ; $i++) { 
+         				echo "<tr>";
+         				echo "<th scope='row'>".($i+1)."</th>";
+         				echo "<td><input type='text' readonly class='form-control-plaintext text-white' id='staticEmail' value='"."LKS00".$datagambar[$i]["id"]."'></td>";
+         				echo "<td>".$datagambar[$i]["judul"]."</td>";
+         				echo "<td>".$datagambar[$i]["tahun"]."</td>";
+         				echo "<td>".$datagambar[$i]["pelukis"]."</td>";
+         				echo "<td class = 'colgambar'> <img src='".$datagambar[$i]["link_gambar"]."' alt='Gambar'> </td>";
+         				echo "<td>";
+         				echo "<a href='form_loekisan.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none py-2 link-primary'><i class='fa-solid fa-images'></i> Edit</a>";
+         				echo "<a href='hapus.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-images'></i> Delete</a>";
+         				echo "</td>";
+         				echo "</tr>";
+         				
+         			} ?>
+         		
          	</tbody>
          </table>
       </div>

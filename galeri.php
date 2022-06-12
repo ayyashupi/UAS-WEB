@@ -64,7 +64,7 @@ crossorigin="anonymous">
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                     <a class="nav-link active pe-3" aria-current="page" href="home.php">L</a>
+                     <a class="nav-link active pe-3" aria-current="page" href="/home.php">L</a>
                   </li>
                </ul>
             </div>

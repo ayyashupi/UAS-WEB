@@ -69,8 +69,10 @@ insert into users values
 (1,"admin@gmail.com","Saya Admin","admin","admin","admin"),
 (2,"user@gmail.com","Saya User","user","user","user");
 
-
-
+insert into gambar values
+(1,"https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+"Mona Lisa","1503","Leonardo da Vinci",110423,"Gambar buatan oleh Leorando da Vinci yang mengilustrasikan perempuan bernama Lisa"),
+(2,"https://sahabatgallery.files.wordpress.com/2009/01/teguh-ostenrik-jkt.jpg","Mendengar Langkah Hati","2007","Teguh Osterik",10442,"Gambar yang dibuat oleh Teguh Osterik");
 
 
 
