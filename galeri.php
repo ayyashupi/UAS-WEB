@@ -4,12 +4,25 @@
 
 session_start();
 
-if(!isset($_SESSION['user_name'])||!isset($_SESSION['admin_name'])){
+if(isset($_SESSION['user_name'])||isset($_SESSION['admin_name'])){
+   
+}else{
    header('location:login_form.php');
+}
+
+$datagambar = null;
+$select = " SELECT * FROM gambar";
+$result = mysqli_query($conn, $select);
+// $jumlah = 1;
+$jumlah = 0;
+while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+  $datagambar[$jumlah] = $row;
+  $jumlah++;
 }
 
 
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -66,7 +79,7 @@ crossorigin="anonymous">
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                     <a class="nav-link active pe-3" aria-current="page" href="/home.php">L</a>
+                     <a class="nav-link active pe-3" aria-current="page" href="home.php">L</a>
                   </li>
                </ul>
             </div>
@@ -96,139 +109,37 @@ crossorigin="anonymous">
 
     <div class="row row-cols-3 px-3 pb-3">
       <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://sahabatgallery.files.wordpress.com/2009/01/taat-joeda-bdg.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://sahabatgallery.files.wordpress.com/2009/01/syahrizal-pahlevi-yogya.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
+      <!-- <div class="col">
         <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
           <div class="p-4">
             <h5> <a href="#" class="text-light">Red paint cup</a></h5>
             <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+            <div class="d-flex align-items-center justify-content-between px-3 py-2 mt-4">
+              <p class="small mb-0"><i class="fa-solid fa-heart"></i></p>
+              <div class="badge badge-danger px-3 rounded-pill font-weight-normal"><i class="fa-solid fa-flag"></i></div>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- End -->
 
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://sahabatgallery.files.wordpress.com/2009/01/taat-joeda-bdg.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
+      <?php 
+      for ($i=0; $i < $jumlah; $i++) { 
+        # code...
+        echo "<div class='col'>";
+        echo "<div class='bg-black rounded shadow-sm'><img src='".$datagambar[$i]["link_gambar"]."' alt='' class='img-fluid card-img-top'>";
+        echo "<div class='p-4'>";
+        echo "<h5> <a href='' class='text-light'>".$datagambar[$i]["judul"]."</a></h5>";
+        echo "<p class='small text-muted-light mb-0'>".$datagambar[$i]["pelukis"]." - ".$datagambar[$i]["tahun"]."</p>";
+        echo "<div class='d-flex align-items-center justify-content-between px-3 py-2 mt-4'>";
+        echo "<p class='small mb-0'><button class='btn btn-link text-decoration-none text-white' id='btnlr'><i class='fa-solid fa-heart'></i></button></p>";
+        echo "<div class='badge badge-danger px-3 rounded-pill font-weight-normal'><button class='btn btn-link text-decoration-none text-white' id='btnlr'><i class='fa-solid fa-flag'></i></button></div>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+      }
+       ?>
 
     </div>
     <!-- <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">Show me more</a></div> -->
