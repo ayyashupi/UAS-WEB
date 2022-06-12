@@ -33,7 +33,7 @@ foreign key (id_pengguna) references users(id)
 
 create table feedback(
 id int primary key auto_increment,
-nama_laporan varchar(255),
+nama_subject varchar(255),
 email varchar(255),
 deskripsi text,
 id_gambar int,
@@ -41,6 +41,8 @@ id_pengguna int,
 nama_gambar varchar(255),
 foreign key (id_pengguna) references users(id)
 );
+
+
 
 create table permintaan_karya(
 id int primary key auto_increment,
@@ -67,6 +69,14 @@ nama_gambar varchar(255)
 );
 
 create table log_laporan(
+id int primary key auto_increment,
+tanggal date,
+aksi varchar(255),
+id_gambar int,
+nama_gambar varchar(255)
+);
+
+create table log_feedback(
 id int primary key auto_increment,
 tanggal date,
 aksi varchar(255),
@@ -173,6 +183,25 @@ values
 end %%
 delimiter ;
 
+delimiter %%
+create or replace procedure InsertFeedback(
+nama_subject_i varchar(255),
+email_i varchar(255),
+desc_i text,
+id_gambar_i int,
+id_pengguna_i int,
+nama_gambar_i varchar(255)
+)
+begin
+
+insert into feedback 
+(nama_subject,email,deskripsi,id_gambar,id_pengguna,nama_gambar)
+values
+(nama_subject_i,email_i,desc_i,id_gambar_i,id_pengguna_i,nama_gambar_i);
+
+end %%
+delimiter ;
+
 
 delimiter %%
 create procedure InsertLogGambar(
@@ -199,6 +228,22 @@ in nama_gambar_i varchar(255)
 begin
 
 insert into log_laporan
+(tanggal, aksi,id_gambar,nama_gambar)
+values
+(now(), aksi_i,id_gambar_i,nama_gambar_i);
+
+end %%
+delimiter ;
+
+delimiter %%
+create procedure InsertLogFeedback(
+in aksi_i varchar(50),
+in id_gambar_i int,
+in nama_gambar_i varchar(255)
+)
+begin
+
+insert into log_feedback
 (tanggal, aksi,id_gambar,nama_gambar)
 values
 (now(), aksi_i,id_gambar_i,nama_gambar_i);
@@ -311,6 +356,28 @@ call InsertLogLike("Delete Like",old.post_id);
 end %%
 delimiter ;
 
+delimiter %%
+create or replace trigger historyInsertFeedback
+after insert
+on laporan FOR EACH ROW    
+begin
+
+call InsertLogFeedback("Insert Feedback",new.id_gambar,new.nama_gambar);
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace trigger historyDeleteFeedback
+after delete
+on laporan FOR EACH ROW    
+begin
+
+call InsertLogFeedback("Delete Feedback",old.id_gambar,old.nama_gambar);
+
+end %%
+delimiter ;
+
 
 
 delimiter %%
@@ -347,6 +414,8 @@ insert into user_likes values
 (4,2,9),
 (5,2,10);
 
+
+
 call InsertUser("admin@gmail.com","Saya Admin","admin","admin","admin");
 call InsertUser("user@gmail.com","Saya User","user","user","user");
 
@@ -378,3 +447,8 @@ call InsertGambar("http://galeri-nasional.or.id/upload/collection/detail_59c2hVA
 Karya Vasarely ini, masih dalam ungkapan komposisi bentuk yang cukup bersahaja. Akan tetapi, pembagian bidang dalam empat bagian dan irama bentuk-bentuk yang disusun dalam gerak diagonal, merupakan prinsip-prinsip dasar optical art yang sudah bisa dirasakan.  Apabila pandangan dikonsentrasikan pada susunan bentuk dan warna itu, akan terasa bahwa ada irama gerak tegas yang mengalir melingkar dari empat bidangnya. Karya-karya OpArt yang akhirnya merebak dan mengalami masa puncak di New York pada tahun 1960-an. OpArt ini merupakan refleksi pemikiran para modernis yang sangat kental dengan jiwa ilmu, pengetahuan, dan teknologi. Fenomena demikian itu adalah buah dari perkembangan satu sisi arus pada modernisme (abad ke-20) yang sangat peduli pada pencarian objektivitas. Hal itu dapat dilihat
 dari munculnya abstraksionisme, yang terdiri dari neoplastisisme, konstruktivisme, dan suprematisme. Lewat karya Vasarely yang sederhana ini, refleksi jiwa objektivitas itu sangat kuat dapat dirasakan.");
 
+call InsertLaporan("Zhofron","zhofron@upi.edu",'Jelek',11,2,'Potret Diri');
+call InsertLaporan("Kevin","zhofron@upi.edu",'Kurang Bagus',11,2,'Potret Diri');
+
+call InsertFeedback("Zhofron","zhofron@upi.edu",'Bagus Sekali',11,2,'Potret Diri');
+call InsertFeedback("Kevin","zhofron@upi.edu",'Sudah Sempurna',11,2,'Potret Diri');
