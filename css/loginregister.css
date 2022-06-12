@@ -1,0 +1,173 @@
+*{
+   font-family: "vogue";
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }  
+            100% {
+                opacity: 1;
+            }
+}
+
+.container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+}
+
+.container .content{
+   text-align: center;
+}
+
+.container .content h3{
+   font-size: 30px;
+   color:#333;
+}
+
+.container .content h3 span{
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:#333;
+}
+
+.container .content h1 span{
+   color:crimson;
+}
+
+.container .content p{
+   font-size: 25px;
+   margin-bottom: 20px;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:10px 30px;
+   font-size: 20px;
+   background: #333;
+   color:#fff;
+   margin:0 5px;
+   text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+   background: crimson;
+}
+
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+   background-image: url(/images/bgLoginRegister.png);
+   background-size: cover;
+}
+
+.form-container form{
+   padding:20px;
+   border-radius: 5px;
+   text-align: center;
+   width: 500px;
+}
+
+.form-container form h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-top: 25px;
+   margin-bottom: 10px;
+   color:whitesmoke;
+   text-shadow: white 0px 0px 8px;
+}
+
+.form-container form input{
+   text-align: center;
+   width: 100%;
+   padding:5px 10px;
+   font-size: 20px;
+   margin:8px 0;
+   background: transparent;
+} .form-container form input::placeholder{
+   color: aqua;
+   opacity: 1;
+} 
+.form-container form .input{
+   color: aquamarine;
+   border:0;
+   border-bottom: aqua 1px solid;
+} .form-container form .input:focus{
+   border:0;
+   border-bottom: aquamarine 2px solid;
+}
+.form-container form .form-btn{
+   color:whitesmoke;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+   border-radius: 5px;
+} .form-container form .form-btn:hover{
+   color: aquamarine;
+    text-shadow:0px 0px 15px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;   
+} .form-container form .form-btn:focus{
+   color: aquamarine;
+    text-shadow:0px 0px 15px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;  
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color:whitesmoke;
+}
+
+.form-container form p a{
+   color:whitesmoke;
+} .form-container form p a:hover{
+   color: aquamarine;
+    text-shadow:0px 0px 15px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;   
+} .form-container form p a:focus{
+   color: aquamarine;
+    text-shadow:0px 0px 15px rgb(255, 255, 255);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;   
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: crimson;
+   color:whitesmoke;
+   border-radius: 5px;
+   font-size: 20px;
+   padding: 5px;
+}

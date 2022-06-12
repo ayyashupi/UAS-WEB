@@ -1,0 +1,19 @@
+/* .bodykirimpesan{
+    background-image: url(/images/bgkirimpesan.png)
+} */
+
+.bodykirimpesan {
+    background-color: black;
+    background-image: url(/images/kirimpesan.png);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 65%;
+  }
+   
+  /* .container {
+    background-image: url(/images/bgkirimpesan.png); */
+    /* background: #a770ef;
+    background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+    background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b); */
+  /* }  */
