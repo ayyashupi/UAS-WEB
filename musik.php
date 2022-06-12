@@ -12,14 +12,14 @@ if(!isset($_SESSION['user_name'])){
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="css/home.css">
 <!-- <link rel="stylesheet" href="/css/menubar.css"> -->
-<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="css/fonts.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
 rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
 crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/5e6fe494a2.js" crossorigin="anonymous"></script>
-<link rel="icon" href="/images/icon.png" type="image/png">
+<link rel="icon" href="images/icon.png" type="image/png">
 <title>Irama Nusantara</title>
 </head>
 <body class="body">
@@ -39,19 +39,19 @@ crossorigin="anonymous">
                <i class="fa-solid fa-bars fa-xl "></i></button>
          </div>
          <ul class="list-unstyled px-2">
-            <li class=""><a href="/galeri.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-images"></i> Baki Tjitra</a></li>
-            <li class=""><a href="/kirimpesan.php" class="text-decoration-none px-3 py-2 d-block">
+            <li class=""><a href="galeri.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-images"></i> Baki Tjitra</a></li>
+            <li class=""><a href="kirimpesan.php" class="text-decoration-none px-3 py-2 d-block">
             <i class="fa-solid fa-envelope"></i> Kotak Soerat
                <!-- <span class="bg-dark rounded-pill text-white py-0 px-2">01</span> -->
             </a>
             </li>
-            <li class="active"><a href="/musik.php" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+            <li class="active"><a href="musik.php" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
             <span><i class="fa-solid fa-compact-disc"></i> Irama Nusantara</span></a></li>
          </ul>
          <hr class="h-color mx-2">
          <ul class="list-unstyled px-2">
-            <li class=""><a href="/akun.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-user"></i> Akoen</a></li>
-            <li class=""><a href="/logout.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-arrow-right-from-bracket"></i> Keloear</a></li>
+            <li class=""><a href="akun.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-user"></i> Akoen</a></li>
+            <li class=""><a href="logout.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-arrow-right-from-bracket"></i> Keloear</a></li>
          </ul>
       </div>
       <div class="content">
@@ -70,7 +70,7 @@ crossorigin="anonymous">
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                     <a class="nav-link active pe-3" aria-current="page" href="/home.php">L</a>
+                     <a class="nav-link active pe-3" aria-current="page" href="home.php">L</a>
                   </li>
                </ul>
             </div>

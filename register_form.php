@@ -36,8 +36,8 @@ if(isset($_POST['submit'])){
 <html lang="en">
 <head>
 <link rel="stylesheet" href="css/loginregister.css">
-<link rel="stylesheet" href="/css/fonts.css">
-<link rel="icon" href="/images/icon.png" type="image/png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="icon" href="images/icon.png" type="image/png">
 <title>Register Loekis</title>
 </head>
 <body>

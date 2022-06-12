@@ -1,16 +1,16 @@
 @font-face {
     font-family: vogue;
-    src: url(/fonts/CupheadVogue-Bold.otf);
+    src: url(../fonts/CupheadVogue-Bold.otf);
 }
 @font-face {
     font-family: canyon;
-    src: url(/fonts/canyon.otf);
+    src: url(../fonts/canyon.otf);
 }
 @font-face {
     font-family: freehand;
-    src: url(/fonts/freehand.ttf);
+    src: url(../fonts/freehand.ttf);
 }
 @font-face {
     font-family: portia;
-    src: url(/fonts/Portia-Oblique.otf);
+    src: url(../fonts/Portia-Oblique.otf);
 }
