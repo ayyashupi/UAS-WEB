@@ -5,21 +5,31 @@
 session_start();
 
 if(isset($_SESSION['user_name'])||isset($_SESSION['admin_name'])){
-   
+   if(!empty($_POST['search'])){
+    $search = $_POST['search'];
+    $datagambar = null;
+    $select = " select * from gambar where id like '%$search%' or judul like '%$search%'";
+    $result = mysqli_query($conn, $select);
+        // $jumlah = 1;
+    $jumlah = 0;
+         while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+          $datagambar[$jumlah] = $row;
+          $jumlah++;
+         }
+      }else{
+        $datagambar = null;
+        $select = " SELECT * FROM gambar";
+        $result = mysqli_query($conn, $select);
+// $jumlah = 1;
+        $jumlah = 0;
+      while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+        $datagambar[$jumlah] = $row;
+        $jumlah++;
+      }
+    }
 }else{
    header('location:login_form.php');
 }
-
-$datagambar = null;
-$select = " SELECT * FROM gambar";
-$result = mysqli_query($conn, $select);
-// $jumlah = 1;
-$jumlah = 0;
-while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-  $datagambar[$jumlah] = $row;
-  $jumlah++;
-}
-
 
 ?>
 
@@ -76,6 +86,18 @@ crossorigin="anonymous">
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button> 
+            <form method="post" action="#" style="width: 50%;">
+              <div class="row g-3 ms-5" >
+
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Nama Gambar" aria-label="First name" name="search">
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn btn-outline-success my-2 my-sm-0" placeholder="Last name" aria-label="Last name" name="save">Submit</button>
+                </div>
+
+              </div>
+            </form>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
