@@ -39,6 +39,7 @@ if(isset($_SESSION['user_name'])||isset($_SESSION['admin_name'])){
       	$datagambar[$jumlah] = $row;
       	$jumlah++;
       }
+      
    }
 }else{
 	header('location:login_form.php');
