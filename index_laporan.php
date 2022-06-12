@@ -94,7 +94,7 @@ crossorigin="anonymous">
          				echo "<td>".$datagambar[$i]["deskripsi"]."</td>";
          				echo "<td>".$datagambar[$i]["nama_gambar"]."</td>";
          				echo "<td>";
-         				echo "<a href='hapus.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-square-minus'></i> Hapus</a>";
+         				echo "<a href='hapus_laporan.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-square-minus'></i> Hapus</a>";
          				echo "</td>";
          				echo "</tr>";
          				

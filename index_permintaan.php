@@ -11,7 +11,7 @@ if(!isset($_SESSION['admin_name'])){
 
 
 $datagambar = null;
-$select = " SELECT * FROM feedback";
+$select = " SELECT * FROM permintaan_karya";
 $result = mysqli_query($conn, $select);
 // $jumlah = 1;
 $jumlah = 0;
@@ -94,7 +94,7 @@ crossorigin="anonymous">
          				echo "<td>".$datagambar[$i]["deskripsi"]."</td>";
 						echo "<td>".$datagambar[$i]["id_pengguna"]."</td>";
          				echo "<td>";
-         				echo "<a href='hapus.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-square-minus'></i> Hapus</a>";
+         				echo "<a href='hapus_permintaan.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-square-minus'></i> Hapus</a>";
          				echo "</td>";
          				echo "</tr>";
          				
