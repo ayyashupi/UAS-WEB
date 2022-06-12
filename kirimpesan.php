@@ -5,11 +5,17 @@
 session_start();
 
 if(!isset($_SESSION['user_name'])){
-   header('location:login_form.php');
-   $datauser = array("","","");
+   if (!isset($_SESSION['admin_name'])) {
+      header('location:login_form.php');
+      $datauser = array("","","");
+   }
+}  
+   if (empty($_SESSION['user_name'])) {
+      $id = $_SESSION['admin_name'];
+   }else{
+      $id = $_SESSION['user_name'];
+   }
    
-}else{
-   $id = $_SESSION['user_name'];
    $select = " SELECT * FROM users WHERE id = $id ";
    $result = mysqli_query($conn, $select);
       while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
@@ -17,7 +23,7 @@ if(!isset($_SESSION['user_name'])){
          $datauser[1] = $row["name"];
          $datauser[2] = $row["email"];
       }
-   }
+   
 
    if (!isset($_GET["id"])) {
       $tombol = "Tambah Lukisan";
@@ -88,7 +94,6 @@ if(!isset($_SESSION['user_name'])){
                </ul>
                <hr class="h-color mx-2">
                <ul class="list-unstyled px-2">
-                  <li class=""><a href="akun.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-user"></i> Akoen</a></li>
                   <li class=""><a href="logout.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-arrow-right-from-bracket"></i> Keloear</a></li>
                </ul>
             </div>

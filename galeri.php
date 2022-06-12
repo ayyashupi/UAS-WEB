@@ -40,17 +40,30 @@ if(isset($_SESSION['user_name'])||isset($_SESSION['admin_name'])){
       		$jumlah++;
       	}
       }
-      $user_id = $_SESSION['user_name'];
-
-      $datalikes = null;
-      $select = "SELECT * FROM user_likes where user_id = $user_id";
-      $result = mysqli_query($conn, $select);
-// $jumlah = 1;
       $jumlahlikes = 0;
+      if (isset($_SESSION['user_name'])||isset($_SESSION['admin_name'])) {
+      	
+      	
+      	if (empty($_SESSION['user_name'])) {
+      		$user_id = $_SESSION['admin_name'];
+      	}else{
+      		$user_id = $_SESSION['user_name'];
+      	}
+      	$datalikes = null;
+      	$select = "SELECT * FROM user_likes where user_id = $user_id";
+      	$result = mysqli_query($conn, $select);
+// $jumlah = 1;
+      
       while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
       	$datalikes[$jumlahlikes] = $row;
       	$jumlahlikes++;
       }
+      }else{
+      	$user_id = "";
+      }
+      
+
+      
 
       // $user_id = "1";
       $action = "";
@@ -115,7 +128,6 @@ if(isset($_SESSION['user_name'])||isset($_SESSION['admin_name'])){
    				</ul>
    				<hr class="h-color mx-2">
    				<ul class="list-unstyled px-2">
-   					<li class=""><a href="akun.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-user"></i> Akoen</a></li>
    					<li class=""><a href="logout.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-arrow-right-from-bracket"></i> Keloear</a></li>
    				</ul>
    			</div>
