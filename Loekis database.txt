@@ -1,4 +1,6 @@
+
 create database loekis;
+use loekis;
 
 create table users(
 id int not null primary key auto_increment,
@@ -7,3 +9,97 @@ name varchar(25) not null,
 username varchar(25) not null,
 password varchar(25) not null,
 user_type varchar(5) not null);
+
+create table gambar(
+id int primary key auto_increment,
+link_gambar varchar(255),
+judul varchar(255),
+tahun varchar(20),
+pelukis varchar(255),
+jumlah_like int,
+deskripsi text
+);
+
+create table laporan(
+id int primary key auto_increment,
+nama_pelapor varchar(255),
+email varchar(255),
+deskripsi text,
+id_gambar int,
+id_pengguna int,
+foreign key (id_gambar) references gambar(id),
+foreign key (id_pengguna) references users(id)
+);
+
+create table feedback(
+id int primary key auto_increment,
+nama_laporan varchar(255),
+email varchar(255),
+deskripsi text,
+id_gambar int,
+id_pengguna int,
+foreign key (id_gambar) references gambar(id),
+foreign key (id_pengguna) references users(id)
+);
+
+create table permintaan_karya(
+id int primary key auto_increment,
+nama_peminta varchar(255),
+email varchar(255),
+deskripsi text,
+id_pengguna int,
+foreign key (id_pengguna) references users(id)
+);
+
+create table like_history(
+id int primary key auto_increment,
+tanggal date,
+id_gambar int,
+foreign key (id_gambar) references gambar(id)
+);
+
+create table log_gambar(
+id int primary key auto_increment,
+tanggal date,
+aksi varchar(255)
+);
+
+
+
+
+
+
+
+
+
+delimiter %%
+create procedure InsertLogGambar(
+in aksi_i varchar(50)
+)
+begin
+
+insert into log_gambar
+(tanggal, aksi)
+values
+(now(), aksi_i);
+
+end %%
+delimiter ;
+
+
+
+
+
+
+
+
+delimiter %%
+create or replace trigger historyInsertGambar
+after insert
+on gambar FOR EACH ROW    
+begin
+
+call InsertLogGambar("Insert Gambar");
+
+end %%
+delimiter ;
