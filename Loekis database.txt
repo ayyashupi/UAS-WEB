@@ -72,8 +72,31 @@ insert into users values
 insert into gambar values
 (1,"https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
 "Mona Lisa","1503","Leonardo da Vinci",110423,"Gambar buatan oleh Leorando da Vinci yang mengilustrasikan perempuan bernama Lisa"),
-(2,"https://sahabatgallery.files.wordpress.com/2009/01/teguh-ostenrik-jkt.jpg","Mendengar Langkah Hati","2007","Teguh Osterik",10442,"Gambar yang dibuat oleh Teguh Osterik");
 
+(2,"https://sahabatgallery.files.wordpress.com/2009/01/teguh-ostenrik-jkt.jpg","Mendengar Langkah Hati","2007","Teguh Osterik",10442,"Gambar yang dibuat oleh Teguh Osterik"),
+
+(3,"https://sahabatgallery.files.wordpress.com/2009/01/syahrizal-pahlevi-yogya.jpg","Menuju Kesederhanaan","2008","Syahrizal Pahlevi",5203,"Gambar yang dibuat oleh Syahrizal Pahlevi"),
+
+(4,"https://sahabatgallery.files.wordpress.com/2009/01/syahruddin-hrp-mdn.jpg","Demokrasi","2000","Syahruddin Harahap",1502,"Gambar yang dibuat oleh Syahruddin Harahap"),
+
+(5,"https://sahabatgallery.files.wordpress.com/2009/01/t-sutanto-bdg.jpg","Black Sun","2008","T. Sutanto",20022,"Gambar yang dibuat oleh T. Sutanto"),
+
+(6,"https://sahabatgallery.files.wordpress.com/2009/01/taat-joeda-bdg.jpg","Semak itu Indah","2008","Taat Joeda",12000,"Gambar yang dibuat oleh Taat Joeda"),
+
+(7,"https://sahabatgallery.files.wordpress.com/2009/02/tetty-mirwa-mdn.jpg","Harmony in Black","2008","Tetty Mirwa",14200,"Gambar yang dibuat oleh Tetty Mirwa"),
+
+(8,"https://sahabatgallery.files.wordpress.com/2009/02/tiarma-sirait-bdg.jpg","Won't Ever Be","2008","Tiarma Dame Ruth Sirait",2124,"Gambar yang dibuat oleh Tiarma Dame Ruth Sirait"),
+
+(9,"https://sahabatgallery.files.wordpress.com/2009/02/tommy-wondra-yogya.jpg","Bermain Dengan Mimpi","2007","Tommy Wondra",1034,"Gambar yang dibuat oleh Tommy Wondra"),
+
+(10,"http://galeri-nasional.or.id/upload/collection/detail_hrAmy2ou71_53_lukisan_tidak_terbaca__bigjpg.jpg","Keterbatasan","1984","Lucia Hartini",24231,"Gambar yang dibuat oleh Lucia Hartini"),
+
+(11,"http://galeri-nasional.or.id/upload/collection/detail_zelD4d6mEo_sunarto_potret_diri__bigjpg.jpg","Potret Diri","1957","Sunarto P. R.",10442,"Lukisan Potret Diri (1957) ini merupakan salah satu lukisan yang banyak mengungkapkan wajah manusia, menggunakan pastel dalam bentukbentuk realistik dengan sapuan kuas yang halus, namun tegas. Sunarto PR. seringkali menggambar menggunakan model dan sekaligus mampu menangkap ekspresi wajah serta mengadirkan karakternya secara kuat, yaitu melalui garis, warna, dan komposisi."),
+
+(12,"http://galeri-nasional.or.id/upload/collection/detail_59c2hVAihK_victor_vasarely__tanpa_judul__bigjpg.jpg","Tanpa Judul","1908","Victor Vasarely",12442,"Litografi ini merupakan prototipe karya Vasarely yang kemudian berkembang menjadi bentuk-bentuk optical illusion art atau yang populer dengan sebutan Optical Art (OpArt). Sebagai suatu fenomena visual awal, karya sejenis ini bercirikan perwujudan bentuk abstrak dengan pola dasar geometri dan outline-nya yang formal. Dalam proses selanjutnya, bentuk-bentuk itu semakin kompleks, tetapi dengan kecenderungan perancangan yang teratur dan terukur. Dengan demikian, dalam pandangan mata, bentuk-bentuk visual itu dapat merangsang retina, sehingga menimbulkan ilusi gerak dan menyilaukan. Efek tersebut menjadi semakin kuat, apabila bentuk-bentuknya dibuat dengan warna yang komplementer.
+
+Karya Vasarely ini, masih dalam ungkapan komposisi bentuk yang cukup bersahaja. Akan tetapi, pembagian bidang dalam empat bagian dan irama bentuk-bentuk yang disusun dalam gerak diagonal, merupakan prinsip-prinsip dasar optical art yang sudah bisa dirasakan.  Apabila pandangan dikonsentrasikan pada susunan bentuk dan warna itu, akan terasa bahwa ada irama gerak tegas yang mengalir melingkar dari empat bidangnya. Karya-karya OpArt yang akhirnya merebak dan mengalami masa puncak di New York pada tahun 1960-an. OpArt ini merupakan refleksi pemikiran para modernis yang sangat kental dengan jiwa ilmu, pengetahuan, dan teknologi. Fenomena demikian itu adalah buah dari perkembangan satu sisi arus pada modernisme (abad ke-20) yang sangat peduli pada pencarian objektivitas. Hal itu dapat dilihat
+dari munculnya abstraksionisme, yang terdiri dari neoplastisisme, konstruktivisme, dan suprematisme. Lewat karya Vasarely yang sederhana ini, refleksi jiwa objektivitas itu sangat kuat dapat dirasakan.");
 
 
 

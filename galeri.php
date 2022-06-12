@@ -4,9 +4,20 @@
 
 session_start();
 
-if(!isset($_SESSION['user_name'])){
+if(!isset($_SESSION['user_name'])||!isset($_SESSION['admin_name'])){
    header('location:login_form.php');
 }
+
+$datagambar = null;
+$select = " SELECT * FROM gambar";
+$result = mysqli_query($conn, $select);
+// $jumlah = 1;
+$jumlah = 0;
+while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+  $datagambar[$jumlah] = $row;
+  $jumlah++;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -95,7 +106,22 @@ crossorigin="anonymous">
     <div class="row row-cols-3 px-3 pb-3">
       <!-- Gallery item -->
       <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
+        <div class="bg-black rounded shadow-sm"><img src="https://sahabatgallery.files.wordpress.com/2009/01/taat-joeda-bdg.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
+            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
+              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
+              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col">
+        <div class="bg-black rounded shadow-sm"><img src="https://sahabatgallery.files.wordpress.com/2009/01/syahrizal-pahlevi-yogya.jpg" alt="" class="img-fluid card-img-top">
           <div class="p-4">
             <h5> <a href="#" class="text-light">Red paint cup</a></h5>
             <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
@@ -140,22 +166,7 @@ crossorigin="anonymous">
 
       <!-- Gallery item -->
       <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
-            <h5> <a href="#" class="text-light">Red paint cup</a></h5>
-            <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-              <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
-              <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End -->
-
-      <!-- Gallery item -->
-      <div class="col">
-        <div class="bg-black rounded shadow-sm"><img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt="" class="img-fluid card-img-top">
+        <div class="bg-black rounded shadow-sm"><img src="https://sahabatgallery.files.wordpress.com/2009/01/taat-joeda-bdg.jpg" alt="" class="img-fluid card-img-top">
           <div class="p-4">
             <h5> <a href="#" class="text-light">Red paint cup</a></h5>
             <p class="small text-muted-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
