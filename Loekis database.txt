@@ -148,6 +148,25 @@ values
 end %%
 delimiter ;
 
+delimiter %%
+create or replace procedure InsertLaporan(
+in pelapor varchar(255),
+in email_i varchar(255),
+in desc_i text,
+in id_gambar_i varchar(255),
+in id_pengguna_i varchar(255),
+in nama_gambar_i varchar(255)
+)
+begin
+
+insert into laporan 
+(nama_pelapor,email,deskripsi,id_gambar,id_pengguna,nama_gambar)
+values
+(pelapor,email_i,desc_i,id_gambar_i,id_pengguna_i,nama_gambar_i);
+
+end %%
+delimiter ;
+
 
 delimiter %%
 create procedure InsertLogGambar(
@@ -219,10 +238,10 @@ delimiter ;
 delimiter %%
 create or replace trigger historyInsertLaporan
 after insert
-on gambar FOR EACH ROW    
+on laporan FOR EACH ROW    
 begin
 
-call InsertLogLaporan("Insert Laporan",new.id,new.judul);
+call InsertLogLaporan("Insert Laporan",new.id_gambar,new.nama_gambar);
 
 end %%
 delimiter ;
@@ -230,10 +249,10 @@ delimiter ;
 delimiter %%
 create or replace trigger historyUpdateLaporan
 after update
-on gambar FOR EACH ROW    
+on laporan FOR EACH ROW    
 begin
 
-call InsertLogLaporan("Update Laporan",old.id,new.judul);
+call InsertLogLaporan("Update Laporan",old.id_gambar,new.nama_gambar);
 
 end %%
 delimiter ;
@@ -241,10 +260,10 @@ delimiter ;
 delimiter %%
 create or replace trigger historyDeleteLaporan
 before delete
-on gambar FOR EACH ROW    
+on laporan FOR EACH ROW    
 begin
 
-call InsertLogLaporan("Delete Laporan",old.id,old.judul);
+call InsertLogLaporan("Delete Laporan",old.id_gambar,old.nama_gambar);
 
 end %%
 delimiter ;

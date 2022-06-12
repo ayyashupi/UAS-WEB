@@ -8,7 +8,7 @@ if(!isset($_SESSION['admin_name'])){
    header('location:login_form.php');
 }
 
-$aksi = "index_loekisan.php";
+// $aksi = "index_loekisan.php";
 // $datagambar = array("1","Mona Lisa","1503","Leonardo da Vinci", "https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg","12343", "Gambar buatan oleh Leorando da Vinci yang mengilustrasikan perempuan bernama Lisa");
 $tombol = "Tambah Lukisan";
 

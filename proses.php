@@ -1,8 +1,8 @@
 <?php 
 @include 'config.php';
 
-if(!isset($_POST['id_loekisan'])){
-
+if($_POST['id_loekisan']==""){
+	echo "Tambah";
 	// $id = mysqli_real_escape_string($conn, $_POST['id_loekisan']);
 	$judul = mysqli_real_escape_string($conn, $_POST['txt_judul']);
 	$tahun = mysqli_real_escape_string($conn, $_POST['txt_tahun']);
@@ -17,9 +17,10 @@ if(!isset($_POST['id_loekisan'])){
 
 	$insert = "call InsertGambar('$link','$judul','$tahun','$pelukis','$jumlah','$desc')";
 	mysqli_query($conn, $insert);
+	// mysqli_error($conn);
 	header('location:index_loekisan.php');
 }else{
-	echo "Masuk";
+	echo "Edit";
 	$id = mysqli_real_escape_string($conn, $_POST['id_loekisan']);
 	$judul = mysqli_real_escape_string($conn, $_POST['txt_judul']);
 	$tahun = mysqli_real_escape_string($conn, $_POST['txt_tahun']);
@@ -32,7 +33,7 @@ if(!isset($_POST['id_loekisan'])){
 
 	// $result = mysqli_query($conn, $select);
 
-	$edit = "call UpdateGambar($id,$link','$judul','$tahun','$pelukis','$jumlah','$desc')";
+	$edit = "call UpdateGambar($id,'$link','$judul','$tahun','$pelukis','$jumlah','$desc')";
 	mysqli_query($conn, $edit);
 	// echo mysqli_error($conn);
 	header('location:index_loekisan.php');
