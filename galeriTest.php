@@ -4,8 +4,10 @@
 
 session_start();
 
-if(!isset($_SESSION['user_name'])||!isset($_SESSION['admin_name'])){
-   header('location:login_form.php');
+if(isset($_SESSION['user_name'])||isset($_SESSION['admin_name'])){
+   
+}else{
+  header('location:login_form.php');
 }
 
 $datagambar = null;

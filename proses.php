@@ -15,7 +15,7 @@ if(!isset($_POST['id_loekisan'])){
 
 	// $result = mysqli_query($conn, $select);
 
-	$insert = "INSERT INTO gambar(judul, tahun, pelukis, jumlah_like,link_gambar, deskripsi) VALUES('$judul','$tahun','$pelukis','$jumlah','$link','$desc')";
+	$insert = "call InsertGambar('$link','$judul','$tahun','$pelukis','$jumlah','$desc')";
 	mysqli_query($conn, $insert);
 	header('location:index_loekisan.php');
 }else{
@@ -32,7 +32,7 @@ if(!isset($_POST['id_loekisan'])){
 
 	// $result = mysqli_query($conn, $select);
 
-	$edit = "update gambar set judul = '$judul', tahun = '$tahun', pelukis = '$pelukis', link_gambar = '$link', deskripsi = '$desc', jumlah_like = ".$jumlah." where id = $id";
+	$edit = "call UpdateGambar($id,$link','$judul','$tahun','$pelukis','$jumlah','$desc')";
 	mysqli_query($conn, $edit);
 	// echo mysqli_error($conn);
 	header('location:index_loekisan.php');

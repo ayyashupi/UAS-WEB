@@ -1,4 +1,4 @@
-
+drop database loekis;
 create database loekis;
 use loekis;
 
@@ -27,7 +27,7 @@ email varchar(255),
 deskripsi text,
 id_gambar int,
 id_pengguna int,
-foreign key (id_gambar) references gambar(id),
+nama_gambar varchar(255),
 foreign key (id_pengguna) references users(id)
 );
 
@@ -38,7 +38,7 @@ email varchar(255),
 deskripsi text,
 id_gambar int,
 id_pengguna int,
-foreign key (id_gambar) references gambar(id),
+nama_gambar varchar(255),
 foreign key (id_pengguna) references users(id)
 );
 
@@ -55,71 +55,131 @@ create table like_history(
 id int primary key auto_increment,
 tanggal date,
 id_gambar int,
-foreign key (id_gambar) references gambar(id)
+nama_gambar varchar(255)
 );
 
 create table log_gambar(
 id int primary key auto_increment,
 tanggal date,
-aksi varchar(255)
+aksi varchar(255),
+id_gambar int,
+nama_gambar varchar(255)
 );
 
-
-insert into users values
-(1,"admin@gmail.com","Saya Admin","admin","admin","admin"),
-(2,"user@gmail.com","Saya User","user","user","user");
-
-insert into gambar values
-(1,"https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
-"Mona Lisa","1503","Leonardo da Vinci",110423,"Gambar buatan oleh Leorando da Vinci yang mengilustrasikan perempuan bernama Lisa"),
-
-(2,"https://sahabatgallery.files.wordpress.com/2009/01/teguh-ostenrik-jkt.jpg","Mendengar Langkah Hati","2007","Teguh Osterik",10442,"Gambar yang dibuat oleh Teguh Osterik"),
-
-(3,"https://sahabatgallery.files.wordpress.com/2009/01/syahrizal-pahlevi-yogya.jpg","Menuju Kesederhanaan","2008","Syahrizal Pahlevi",5203,"Gambar yang dibuat oleh Syahrizal Pahlevi"),
-
-(4,"https://sahabatgallery.files.wordpress.com/2009/01/syahruddin-hrp-mdn.jpg","Demokrasi","2000","Syahruddin Harahap",1502,"Gambar yang dibuat oleh Syahruddin Harahap"),
-
-(5,"https://sahabatgallery.files.wordpress.com/2009/01/t-sutanto-bdg.jpg","Black Sun","2008","T. Sutanto",20022,"Gambar yang dibuat oleh T. Sutanto"),
-
-(6,"https://sahabatgallery.files.wordpress.com/2009/01/taat-joeda-bdg.jpg","Semak itu Indah","2008","Taat Joeda",12000,"Gambar yang dibuat oleh Taat Joeda"),
-
-(7,"https://sahabatgallery.files.wordpress.com/2009/02/tetty-mirwa-mdn.jpg","Harmony in Black","2008","Tetty Mirwa",14200,"Gambar yang dibuat oleh Tetty Mirwa"),
-
-(8,"https://sahabatgallery.files.wordpress.com/2009/02/tiarma-sirait-bdg.jpg","Won't Ever Be","2008","Tiarma Dame Ruth Sirait",2124,"Gambar yang dibuat oleh Tiarma Dame Ruth Sirait"),
-
-(9,"https://sahabatgallery.files.wordpress.com/2009/02/tommy-wondra-yogya.jpg","Bermain Dengan Mimpi","2007","Tommy Wondra",1034,"Gambar yang dibuat oleh Tommy Wondra"),
-
-(10,"http://galeri-nasional.or.id/upload/collection/detail_hrAmy2ou71_53_lukisan_tidak_terbaca__bigjpg.jpg","Keterbatasan","1984","Lucia Hartini",24231,"Gambar yang dibuat oleh Lucia Hartini"),
-
-(11,"http://galeri-nasional.or.id/upload/collection/detail_zelD4d6mEo_sunarto_potret_diri__bigjpg.jpg","Potret Diri","1957","Sunarto P. R.",10442,"Lukisan Potret Diri (1957) ini merupakan salah satu lukisan yang banyak mengungkapkan wajah manusia, menggunakan pastel dalam bentukbentuk realistik dengan sapuan kuas yang halus, namun tegas. Sunarto PR. seringkali menggambar menggunakan model dan sekaligus mampu menangkap ekspresi wajah serta mengadirkan karakternya secara kuat, yaitu melalui garis, warna, dan komposisi."),
-
-(12,"http://galeri-nasional.or.id/upload/collection/detail_59c2hVAihK_victor_vasarely__tanpa_judul__bigjpg.jpg","Tanpa Judul","1908","Victor Vasarely",12442,"Litografi ini merupakan prototipe karya Vasarely yang kemudian berkembang menjadi bentuk-bentuk optical illusion art atau yang populer dengan sebutan Optical Art (OpArt). Sebagai suatu fenomena visual awal, karya sejenis ini bercirikan perwujudan bentuk abstrak dengan pola dasar geometri dan outline-nya yang formal. Dalam proses selanjutnya, bentuk-bentuk itu semakin kompleks, tetapi dengan kecenderungan perancangan yang teratur dan terukur. Dengan demikian, dalam pandangan mata, bentuk-bentuk visual itu dapat merangsang retina, sehingga menimbulkan ilusi gerak dan menyilaukan. Efek tersebut menjadi semakin kuat, apabila bentuk-bentuknya dibuat dengan warna yang komplementer.
-
-Karya Vasarely ini, masih dalam ungkapan komposisi bentuk yang cukup bersahaja. Akan tetapi, pembagian bidang dalam empat bagian dan irama bentuk-bentuk yang disusun dalam gerak diagonal, merupakan prinsip-prinsip dasar optical art yang sudah bisa dirasakan.  Apabila pandangan dikonsentrasikan pada susunan bentuk dan warna itu, akan terasa bahwa ada irama gerak tegas yang mengalir melingkar dari empat bidangnya. Karya-karya OpArt yang akhirnya merebak dan mengalami masa puncak di New York pada tahun 1960-an. OpArt ini merupakan refleksi pemikiran para modernis yang sangat kental dengan jiwa ilmu, pengetahuan, dan teknologi. Fenomena demikian itu adalah buah dari perkembangan satu sisi arus pada modernisme (abad ke-20) yang sangat peduli pada pencarian objektivitas. Hal itu dapat dilihat
-dari munculnya abstraksionisme, yang terdiri dari neoplastisisme, konstruktivisme, dan suprematisme. Lewat karya Vasarely yang sederhana ini, refleksi jiwa objektivitas itu sangat kuat dapat dirasakan.");
-
+create table log_laporan(
+id int primary key auto_increment,
+tanggal date,
+aksi varchar(255),
+id_gambar int,
+nama_gambar varchar(255)
+);
 
 
 
 delimiter %%
-create procedure InsertLogGambar(
-in aksi_i varchar(50)
+create or replace procedure InsertGambar(
+in link_i varchar(255),
+in judul_i varchar(255),
+in tahun_i varchar(255),
+in pelukis_i varchar(255),
+in jumlah_i varchar(255),
+in desc_i text
 )
 begin
 
-insert into log_gambar
-(tanggal, aksi)
+insert into gambar 
+(link_gambar,judul,tahun,pelukis,jumlah_like,deskripsi)
 values
-(now(), aksi_i);
+(link_i,judul_i,tahun_i,pelukis_i,jumlah_i,desc_i);
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace procedure UpdateGambar(
+in id_i int,
+in link_i varchar(255),
+in judul_i varchar(255),
+in tahun_i varchar(255),
+in pelukis_i varchar(255),
+in jumlah_i varchar(255),
+in desc_i text
+)
+begin
+
+update gambar set
+link_gambar = link_i,
+judul = judul_i,
+tahun = tahun_i,
+pelukis = pelukis_i,
+jumlah_like = jumlah_i,
+deskripsi = desc_i
+where id = id_i;
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace procedure DeleteGambar(
+in id_i int
+)
+begin
+
+delete from gambar where id = id_i;
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace procedure InsertUser(
+in email_i varchar(255),
+in name_i varchar(255),
+in username_i varchar(255),
+in password_i varchar(255),
+in user_type_i varchar(255)
+)
+begin
+
+insert into users 
+(email,name,username,password,user_type)
+values
+(email_i,name_i,username_i,password_i,user_type_i);
 
 end %%
 delimiter ;
 
 
+delimiter %%
+create procedure InsertLogGambar(
+in aksi_i varchar(50),
+in id_gambar_i int,
+in nama_gambar_i varchar(255)
+)
+begin
 
+insert into log_gambar
+(tanggal, aksi,id_gambar,nama_gambar)
+values
+(now(), aksi_i,id_gambar_i,nama_gambar_i);
 
+end %%
+delimiter ;
 
+delimiter %%
+create procedure InsertLogLaporan(
+in aksi_i varchar(50),
+in id_gambar_i int,
+in nama_gambar_i varchar(255)
+)
+begin
 
+insert into log_laporan
+(tanggal, aksi,id_gambar,nama_gambar)
+values
+(now(), aksi_i,id_gambar_i,nama_gambar_i);
+
+end %%
+delimiter ;
 
 
 delimiter %%
@@ -128,7 +188,97 @@ after insert
 on gambar FOR EACH ROW    
 begin
 
-call InsertLogGambar("Insert Gambar");
+call InsertLogGambar("Insert Gambar",new.id,new.judul);
 
 end %%
 delimiter ;
+
+delimiter %%
+create or replace trigger historyUpdateGambar
+after update
+on gambar FOR EACH ROW    
+begin
+
+call InsertLogGambar("Update Gambar",old.id,new.judul);
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace trigger historyDeleteGambar
+before delete
+on gambar FOR EACH ROW    
+begin
+
+call InsertLogGambar("Delete Gambar",old.id,old.judul);
+
+end %%
+delimiter ;
+
+
+delimiter %%
+create or replace trigger historyInsertLaporan
+after insert
+on gambar FOR EACH ROW    
+begin
+
+call InsertLogLaporan("Insert Laporan",new.id,new.judul);
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace trigger historyUpdateLaporan
+after update
+on gambar FOR EACH ROW    
+begin
+
+call InsertLogLaporan("Update Laporan",old.id,new.judul);
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace trigger historyDeleteLaporan
+before delete
+on gambar FOR EACH ROW    
+begin
+
+call InsertLogLaporan("Delete Laporan",old.id,old.judul);
+
+end %%
+delimiter ;
+
+
+
+call InsertUser("admin@gmail.com","Saya Admin","admin","admin","admin");
+call InsertUser("user@gmail.com","Saya User","user","user","user");
+
+call InsertGambar("https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+"Mona Lisa","1503","Leonardo da Vinci",110423,"Gambar buatan oleh Leorando da Vinci yang mengilustrasikan perempuan bernama Lisa");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/01/teguh-ostenrik-jkt.jpg","Mendengar Langkah Hati","2007","Teguh Osterik",10442,"Gambar yang dibuat oleh Teguh Osterik");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/01/syahrizal-pahlevi-yogya.jpg","Menuju Kesederhanaan","2008","Syahrizal Pahlevi",5203,"Gambar yang dibuat oleh Syahrizal Pahlevi");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/01/syahruddin-hrp-mdn.jpg","Demokrasi","2000","Syahruddin Harahap",1502,"Gambar yang dibuat oleh Syahruddin Harahap");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/01/t-sutanto-bdg.jpg","Black Sun","2008","T. Sutanto",20022,"Gambar yang dibuat oleh T. Sutanto");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/01/taat-joeda-bdg.jpg","Semak itu Indah","2008","Taat Joeda",12000,"Gambar yang dibuat oleh Taat Joeda");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/02/tetty-mirwa-mdn.jpg","Harmony in Black","2008","Tetty Mirwa",14200,"Gambar yang dibuat oleh Tetty Mirwa");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/02/tiarma-sirait-bdg.jpg","Won't Ever Be","2008","Tiarma Dame Ruth Sirait",2124,"Gambar yang dibuat oleh Tiarma Dame Ruth Sirait");
+
+call InsertGambar("https://sahabatgallery.files.wordpress.com/2009/02/tommy-wondra-yogya.jpg","Bermain Dengan Mimpi","2007","Tommy Wondra",1034,"Gambar yang dibuat oleh Tommy Wondra");
+
+call InsertGambar("http://galeri-nasional.or.id/upload/collection/detail_hrAmy2ou71_53_lukisan_tidak_terbaca__bigjpg.jpg","Keterbatasan","1984","Lucia Hartini",24231,"Gambar yang dibuat oleh Lucia Hartini");
+
+call InsertGambar("http://galeri-nasional.or.id/upload/collection/detail_zelD4d6mEo_sunarto_potret_diri__bigjpg.jpg","Potret Diri","1957","Sunarto P. R.",10442,"Lukisan Potret Diri (1957) ini merupakan salah satu lukisan yang banyak mengungkapkan wajah manusia, menggunakan pastel dalam bentukbentuk realistik dengan sapuan kuas yang halus, namun tegas. Sunarto PR. seringkali menggambar menggunakan model dan sekaligus mampu menangkap ekspresi wajah serta mengadirkan karakternya secara kuat, yaitu melalui garis, warna, dan komposisi.");
+
+call InsertGambar("http://galeri-nasional.or.id/upload/collection/detail_59c2hVAihK_victor_vasarely__tanpa_judul__bigjpg.jpg","Tanpa Judul","1908","Victor Vasarely",12442,"Litografi ini merupakan prototipe karya Vasarely yang kemudian berkembang menjadi bentuk-bentuk optical illusion art atau yang populer dengan sebutan Optical Art (OpArt). Sebagai suatu fenomena visual awal, karya sejenis ini bercirikan perwujudan bentuk abstrak dengan pola dasar geometri dan outline-nya yang formal. Dalam proses selanjutnya, bentuk-bentuk itu semakin kompleks, tetapi dengan kecenderungan perancangan yang teratur dan terukur. Dengan demikian, dalam pandangan mata, bentuk-bentuk visual itu dapat merangsang retina, sehingga menimbulkan ilusi gerak dan menyilaukan. Efek tersebut menjadi semakin kuat, apabila bentuk-bentuknya dibuat dengan warna yang komplementer.
+
+Karya Vasarely ini, masih dalam ungkapan komposisi bentuk yang cukup bersahaja. Akan tetapi, pembagian bidang dalam empat bagian dan irama bentuk-bentuk yang disusun dalam gerak diagonal, merupakan prinsip-prinsip dasar optical art yang sudah bisa dirasakan.  Apabila pandangan dikonsentrasikan pada susunan bentuk dan warna itu, akan terasa bahwa ada irama gerak tegas yang mengalir melingkar dari empat bidangnya. Karya-karya OpArt yang akhirnya merebak dan mengalami masa puncak di New York pada tahun 1960-an. OpArt ini merupakan refleksi pemikiran para modernis yang sangat kental dengan jiwa ilmu, pengetahuan, dan teknologi. Fenomena demikian itu adalah buah dari perkembangan satu sisi arus pada modernisme (abad ke-20) yang sangat peduli pada pencarian objektivitas. Hal itu dapat dilihat
+dari munculnya abstraksionisme, yang terdiri dari neoplastisisme, konstruktivisme, dan suprematisme. Lewat karya Vasarely yang sederhana ini, refleksi jiwa objektivitas itu sangat kuat dapat dirasakan.");
+
