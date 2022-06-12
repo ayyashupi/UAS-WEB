@@ -1,0 +1,9 @@
+create database loekis;
+
+create table users(
+id int not null primary key auto_increment,
+email varchar(50) not null,
+name varchar(25) not null,
+username varchar(25) not null,
+password varchar(25) not null,
+user_type varchar(5) not null);
