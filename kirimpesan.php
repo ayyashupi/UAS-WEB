@@ -149,11 +149,11 @@ if(!isset($_SESSION['user_name'])){
                                  <p class="head text-white" style="font-size: 160%; margin-bottom: 0%;">Permintaan Mengunggah Karya</p>
                                  <p class="text-white">Kami membuka peluang untuk masyarakat umum yang ingin mempublikasikan karyanya. pada form ini dipersilahkan untuk mengirim soerat terbuka kepada kami agar kami bisa menampilkan karya mu.</p>
                                  <!-- <p class="head">Nama</p> -->
-                                 <p><input placeholder="Nama" type="text" name="Nama" size="40" id="NamaK" value="<?php echo $datauser[1] ?>"></p>
+                                 <p><input placeholder="Nama" type="text" name="nama_karya" size="40" id="NamaK" value="<?php echo $datauser[1] ?>"></p>
                                  <!-- <p class="head">Surel</p> -->
-                                 <p><input placeholder="Surel" type="text" name="email" size="40" id="EmailK" value="<?php echo $datauser[2] ?>"></p>
+                                 <p><input placeholder="Surel" type="text" name="email_karya" size="40" id="EmailK" value="<?php echo $datauser[2] ?>"></p>
                                  <!-- <p class="head">Deskripsi Laporan</p> -->
-                                 <p><textarea placeholder="Deskripsi Permintaan" rows="7" cols="40" name="teks" id="DeskK"></textarea></p>
+                                 <p><textarea placeholder="Deskripsi Permintaan" rows="7" cols="40" name="teks_karya" id="DeskK"></textarea></p>
                                  <button class="button" style="position: absolute; left:38%;top: 50%;" id="btnKarya">Submit</button>
                               </form>
                            </section>
@@ -163,11 +163,11 @@ if(!isset($_SESSION['user_name'])){
                                  <p class="head text-white" style="font-size: 160%; margin-bottom: 0%;">Pesan Kesan</p>
                                  <p class="text-white">Salah satu kemampuan manusia yang sangat menakjubkan adalah kemampuan untuk mengkomunikasikan perasaanya kepada manusia lainya. Tab ini membantu kamu untuk mengkomunikasikan apa yang ada di hati mu kepada kami.</p>
                                  <!-- <p class="head">Nama</p> -->
-                                 <p><input placeholder="Nama" type="text" name="Nama" size="40" id="NamaD" value="<?php echo $datauser[1] ?>"></p>
+                                 <p><input placeholder="Nama" type="text" name="nama_feedback" size="40" id="NamaD" value="<?php echo $datauser[1] ?>"></p>
                                  <!-- <p class="head">Surel</p> -->
-                                 <p><input placeholder="Surel" type="text" name="email" size="40" id="EmailD" value="<?php echo $datauser[2] ?>"></p>
+                                 <p><input placeholder="Surel" type="text" name="email_feedback" size="40" id="EmailD" value="<?php echo $datauser[2] ?>"></p>
                                  <!-- <p class="head">Deskripsi Laporan</p> -->
-                                 <p><textarea placeholder="Pesan" rows="7" cols="40" name="teks" id="DeskD"></textarea></p>
+                                 <p><textarea placeholder="Pesan" rows="7" cols="40" name="teks_feedback" id="DeskD"></textarea></p>
                                  <button class="button" style="position: absolute; left:38%;top: 50%;" id="btnDesk" onclick="TampilNotif()">Submit</button>
                               </form>
                            </section>
