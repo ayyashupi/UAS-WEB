@@ -80,7 +80,7 @@ crossorigin="anonymous">
          			<th scope="col">Nama Pelapor</th>
          			<th scope="col">Email</th>
          			<th scope="col">Deskripsi</th>
-         			<th scope="col">Lukisan</th>
+         			<th scope="col">Nama Gambar</th>
          			<th scope="col">Action</th>
          		</tr>
          	</thead>
@@ -92,7 +92,7 @@ crossorigin="anonymous">
          				echo "<td>".$datagambar[$i]["nama_pelapor"]."</td>";
          				echo "<td>".$datagambar[$i]["email"]."</td>";
          				echo "<td>".$datagambar[$i]["deskripsi"]."</td>";
-         				echo "<td class = 'colgambar'> <img src='".$datagambar[$i]["link_gambar"]."' alt='Gambar'> </td>";
+         				echo "<td>".$datagambar[$i]["nama_gambar"]."</td>";
          				echo "<td>";
          				echo "<a href='hapus.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-square-minus'></i> Hapus</a>";
          				echo "</td>";

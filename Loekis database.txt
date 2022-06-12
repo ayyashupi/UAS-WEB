@@ -42,8 +42,6 @@ nama_gambar varchar(255),
 foreign key (id_pengguna) references users(id)
 );
 
-
-
 create table permintaan_karya(
 id int primary key auto_increment,
 nama_peminta varchar(255),
@@ -82,6 +80,13 @@ tanggal date,
 aksi varchar(255),
 id_gambar int,
 nama_gambar varchar(255)
+);
+
+create table log_karya(
+id int primary key auto_increment,
+tanggal date,
+aksi varchar(255),
+deskripsi text
 );
 
 create table user_likes(
@@ -202,6 +207,23 @@ values
 end %%
 delimiter ;
 
+delimiter %%
+create or replace procedure InsertKarya(
+nama_peminta_i varchar(255),
+email_i varchar(255),
+deskripsi_i text,
+id_pengguna_i int
+)
+begin
+
+insert into feedback 
+(nama_peminta,email,deskripsi,id_pengguna)
+values
+(nama_peminta_i,email_i,deskripsi_i,id_pengguna_i);
+
+end %%
+delimiter ;
+
 
 delimiter %%
 create procedure InsertLogGambar(
@@ -247,6 +269,21 @@ insert into log_feedback
 (tanggal, aksi,id_gambar,nama_gambar)
 values
 (now(), aksi_i,id_gambar_i,nama_gambar_i);
+
+end %%
+delimiter ;
+
+delimiter %%
+create procedure InsertLogKarya(
+in aksi_i varchar(50),
+in desc_i text
+)
+begin
+
+insert into log_karya
+(tanggal, aksi,deskripsi)
+values
+(now(), aksi_i,desc_i);
 
 end %%
 delimiter ;
@@ -378,6 +415,28 @@ call InsertLogFeedback("Delete Feedback",old.id_gambar,old.nama_gambar);
 end %%
 delimiter ;
 
+delimiter %%
+create or replace trigger historyInsertKarya
+after insert
+on permintaan_karya FOR EACH ROW    
+begin
+
+call InsertLogKarya("Insert Feedback",new.deskripsi);
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace trigger historyDeleteKarya
+after delete
+on permintaan_karya FOR EACH ROW    
+begin
+
+call InsertLogKarya("Delete Feedback",old.deskripsi);
+
+end %%
+delimiter ;
+
 
 
 delimiter %%
@@ -452,3 +511,6 @@ call InsertLaporan("Kevin","zhofron@upi.edu",'Kurang Bagus',11,2,'Potret Diri');
 
 call InsertFeedback("Zhofron","zhofron@upi.edu",'Bagus Sekali',11,2,'Potret Diri');
 call InsertFeedback("Kevin","zhofron@upi.edu",'Sudah Sempurna',11,2,'Potret Diri');
+
+call InsertKarya("Adit","Adit@gmail.com","Masukin Gambar NFT dong bang",2);
+call InsertKarya("Kevin","Kevin@gmail.com","Masukin Gambar Anime dong bang",2);
