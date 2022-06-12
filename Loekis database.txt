@@ -65,6 +65,8 @@ aksi varchar(255)
 );
 
 
+insert into users values
+(1,"admin@gmail.com","Saya Admin","admin","admin","admin");
 
 
 
