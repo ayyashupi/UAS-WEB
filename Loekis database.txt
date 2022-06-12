@@ -54,8 +54,8 @@ foreign key (id_pengguna) references users(id)
 create table like_history(
 id int primary key auto_increment,
 tanggal date,
-id_gambar int,
-nama_gambar varchar(255)
+aksi varchar(255),
+id_gambar int
 );
 
 create table log_gambar(
@@ -72,6 +72,12 @@ tanggal date,
 aksi varchar(255),
 id_gambar int,
 nama_gambar varchar(255)
+);
+
+create table user_likes(
+id int primary key auto_increment,
+user_id int,
+post_id int
 );
 
 
@@ -200,6 +206,21 @@ values
 end %%
 delimiter ;
 
+delimiter %%
+create procedure InsertLogLike(
+in aksi_i varchar(50),
+in id_gambar_i int
+)
+begin
+
+insert into like_history
+(tanggal, aksi,id_gambar)
+values
+(now(), aksi_i,id_gambar_i);
+
+end %%
+delimiter ;
+
 
 delimiter %%
 create or replace trigger historyInsertGambar
@@ -268,7 +289,63 @@ call InsertLogLaporan("Delete Laporan",old.id_gambar,old.nama_gambar);
 end %%
 delimiter ;
 
+delimiter %%
+create or replace trigger historyInsertLike
+after insert
+on user_likes FOR EACH ROW    
+begin
 
+call InsertLogLike("Insert Like",new.post_id);
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace trigger historyDeleteLike
+before delete
+on user_likes FOR EACH ROW    
+begin
+
+call InsertLogLike("Delete Like",old.post_id);
+
+end %%
+delimiter ;
+
+
+
+delimiter %%
+create or replace trigger insertLikesGambar
+after insert
+on user_likes FOR EACH ROW    
+begin
+
+update gambar 
+set jumlah_like = jumlah_like+1
+where id = new.post_id;
+
+end %%
+delimiter ;
+
+delimiter %%
+create or replace trigger deleteLikesGambar
+after delete
+on user_likes FOR EACH ROW    
+begin
+
+update gambar 
+set jumlah_like = jumlah_like-1
+where id = old.post_id;
+
+end %%
+delimiter ;
+
+
+insert into user_likes values
+(1,2,1),
+(2,2,4),
+(3,2,2),
+(4,2,9),
+(5,2,10);
 
 call InsertUser("admin@gmail.com","Saya Admin","admin","admin","admin");
 call InsertUser("user@gmail.com","Saya User","user","user","user");
