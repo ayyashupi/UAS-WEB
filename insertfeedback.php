@@ -11,8 +11,10 @@
 	
 	if (empty($_SESSION["user_name"])) {
 		$id_pengguna = $_SESSION["admin_name"];
+		$exit = "location:home.php";
 	}else{
 		$id_pengguna = $_SESSION["user_name"];
+		$exit = "location:admin_page.php";
 	}
 	$id_gambar = $_SESSION["id_gambar"];
 	$judul = $_SESSION["judul"];
@@ -33,6 +35,6 @@
 	$_SESSION["id_gambar"] = "";
 	$_SESSION["judul"] = "";
 	// echo mysqli_error($conn);
-	header('location:home.php');
+	header($exit);
 
  ?>
