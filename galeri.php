@@ -8,15 +8,6 @@ if(!isset($_SESSION['user_name'])||!isset($_SESSION['admin_name'])){
    header('location:login_form.php');
 }
 
-$datagambar = null;
-$select = " SELECT * FROM gambar";
-$result = mysqli_query($conn, $select);
-// $jumlah = 1;
-$jumlah = 0;
-while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-  $datagambar[$jumlah] = $row;
-  $jumlah++;
-}
 
 ?>
 
