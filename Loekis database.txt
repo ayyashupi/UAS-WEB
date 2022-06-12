@@ -216,7 +216,7 @@ id_pengguna_i int
 )
 begin
 
-insert into feedback 
+insert into permintaan_karya 
 (nama_peminta,email,deskripsi,id_pengguna)
 values
 (nama_peminta_i,email_i,deskripsi_i,id_pengguna_i);
