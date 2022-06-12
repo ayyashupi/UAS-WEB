@@ -8,7 +8,11 @@
 	$email = mysqli_real_escape_string($conn, $_POST['email_lapor']);
 	$desc = mysqli_real_escape_string($conn, $_POST['teks_lapor']);
 	// echo "Data : ".$desc;
-	$id_pengguna = $_SESSION["user_name"];
+	if (empty($_SESSION["user_name"])) {
+		$id_pengguna = $_SESSION["admin_name"];
+	}else{
+		$id_pengguna = $_SESSION["user_name"];
+	}
 	$id_gambar = $_SESSION["id_gambar"];
 	$judul = $_SESSION["judul"];
 
