@@ -11,10 +11,10 @@
 
 	if (empty($_SESSION["user_name"])) {
 		$id_pengguna = $_SESSION["admin_name"];
-		$exit = "location:home.php";
+		$exit = "location:admin_page.php";
 	}else{
 		$id_pengguna = $_SESSION["user_name"];
-		$exit = "location:admin_page.php";
+		$exit = "location:home.php";
 	}
 	$id_gambar = $_SESSION["id_gambar"];
 	$judul = $_SESSION["judul"];
