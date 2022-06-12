@@ -8,6 +8,8 @@ if(!isset($_SESSION['user_name'])){
    header('location:login_form.php');
 }
 
+
+
 $datagambar = null;
 $select = " SELECT * FROM gambar";
 $result = mysqli_query($conn, $select);
@@ -46,7 +48,7 @@ crossorigin="anonymous">
 
 <body class="body">
 	<div class="main-container d-flex">
-		<?php include 'sidebar/sidebaradmin.html' ?>
+		<?php include 'sidebar/sidebaradmin.html';?>
 		<div class="content">
          <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-fluid">
@@ -98,6 +100,7 @@ crossorigin="anonymous">
          				echo "</tr>";
          				
          			} ?>
+
          		
          	</tbody>
          </table>

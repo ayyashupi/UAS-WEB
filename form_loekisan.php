@@ -14,6 +14,7 @@ $tombol = "Tambah Lukisan";
 
 if (!isset($_GET["id"])) {
 	$tombol = "Tambah Lukisan";
+	$datagambar = array("","","","","","","");
 }else{
 	$tombol = "Edit Lukisan";
 	$id_gambar = $_GET["id"];
@@ -36,8 +37,6 @@ if (!isset($_GET["id"])) {
 
 <!DOCTYPE html>
 <html>
-
-
 
 <head>
 	<title>Form Loekis</title>
