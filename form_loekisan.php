@@ -84,7 +84,7 @@ crossorigin="anonymous">
 				<div class="row">
 					<div class="col bg-dark rounded p-4 pt-0">
 						<form method="post" action="proses.php">
-							<p class="text-start text-white fs-2 fw-bold mt-3">FORM LOEKISAN</p>
+							<p class="text-start text-white fs-2 fw-bold mt-3">Form Lukisan</p>
 							<input type="text" readonly class="form-control-plaintext text-white invisible" id="staticEmail" name="id_loekisan" value="<?php echo $datagambar[0] ?>">
 							<div class="input-group mb-3">
 

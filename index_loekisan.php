@@ -71,16 +71,16 @@ crossorigin="anonymous">
             </div>
             </div>
          </nav>
-
+		 <div class="dashboard-content px-5 pt-4 py-4">
          <table class="table table-dark">
          	<thead>
          		<tr>
          			<th scope="col">No.</th>
-         			<th scope="col">ID Loekisan</th>
-         			<th scope="col">Judul Loekisan</th>
-         			<th scope="col">Tahun Loekisan</th>
+         			<th scope="col">ID Lukisan</th>
+         			<th scope="col">Judul Lukisan</th>
+         			<th scope="col">Tahun Lukisan</th>
          			<th scope="col">Pelukis</th>
-         			<th scope="col">Loekisan</th>
+         			<th scope="col">Lukisan</th>
          			<th scope="col">Action</th>
          		</tr>
          	</thead>
@@ -94,8 +94,8 @@ crossorigin="anonymous">
          				echo "<td>".$datagambar[$i]["pelukis"]."</td>";
          				echo "<td class = 'colgambar'> <img src='".$datagambar[$i]["link_gambar"]."' alt='Gambar'> </td>";
          				echo "<td>";
-         				echo "<a href='form_loekisan.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none py-2 link-primary'><i class='fa-solid fa-images'></i> Edit</a>";
-         				echo "<a href='hapus.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-images'></i> Delete</a>";
+         				echo "<a href='form_loekisan.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none py-2 link-primary'><i class='fa-solid fa-pen-to-square'></i> Edit</a>";
+         				echo "<a href='hapus.php?id=".$datagambar[$i]["id"]."' class='text-decoration-none px-3 py-2 link-danger'><i class='fa-solid fa-square-minus'></i> Hapus</a>";
          				echo "</td>";
          				echo "</tr>";
          				
@@ -104,6 +104,7 @@ crossorigin="anonymous">
          		
          	</tbody>
          </table>
+		</div>
       </div>
 	</div>
 
